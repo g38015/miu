@@ -29,7 +29,7 @@
     <!-- Home Page -->
 	<div data-role="page" id="home">
 	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Mobile Lead Tracker</h1>
+	        <h1>Lead Tracker</h1>
 	    </div>
 	    <div id="feature">
 	        <p>Feature</p>
@@ -41,11 +41,12 @@
 	            <li><a href="#bedrooms">Number of Bedrooms</a></li>
 	            <li><a href="#price">Price Range</a></li>
 	            <!-- <li data-role="list-divider">Divider</li> -->
-	            <li><a href="#">Ready to Buy?</a></li>
-	            <li><a href="additem.html">Enter New Lead</a></li>
+	            <li><a href="#ready">Ready to Buy?</a></li>
+	            <li><a href="#new">Enter New Lead</a></li>
+	            <li><a href="#search">Search</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-position="fixed" data-theme="d">
+	    <div data-role="footer" data-theme="d">
 	        <h4>Footer</h4>
 	    </div>
 	</div>
@@ -84,6 +85,134 @@
 	    <div data-role="content">
 	        <p>Nothing Yet!</p>
 	    </div>
+	    <div data-role="footer" data-position="fixed" data-theme="d">
+	        <h4>Footer</h4>
+	    </div>
+	</div>
+	
+	<!-- 5th Page -->
+	<div data-role="page" id="ready" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="d">
+	        <h1>Ready to Buy?</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>Nothing Yet!</p>
+	    </div>
+	    <div data-role="footer" data-position="fixed" data-theme="d">
+	        <h4>Footer</h4>
+	    </div>
+	</div>
+	
+	<!-- 6th Page -->
+	<div data-role="page" id="new" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="d">
+	        <h1>New Lead</h1>
+	    </div>
+	    <div data-role="content">
+	    
+	        <a href="#" id="clear" data-role="button">Delete Leads</a>
+	        <a href="#" id="displayLink" data-role="button">Show Leads</a>
+	        <a href="#new" id="addNew" data-role="button">Add New</a>
+	        
+	        <form action="#" method="post" id="contactForm" name="leadForm">
+	            
+	                <div id="errors">
+	                </div>
+	                
+	                <div data-role="fieldcontain">   
+	            	    <label for="name">Name:</label>
+	            	    <input type="text" id="name" placeholder="Name" />
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">
+	            	    <label for="phone">Phone:</label>
+	            	    <input type="tel" id="phone" placeholder="555-1212" />
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">    
+	            	    <label for="email">Email:</label>
+	            	    <input type="email" id="email" placeholder="email@email.com" />
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">
+	            	    <label for="date">Date:</label>
+	            	    <input type="date" id="date" />
+	            	</div>
+	        	    
+	                <div data-role="fieldcontain" id="property">
+	                    <label for="">Property Type:</label>    
+	            	    <input type="checkbox" value="Sfr" id="sfr" name="type" />
+	            	    <label for="sfr">Single Family</label>
+	            	    <input type="checkbox" value="Townhome" id="townhome" name="type" />
+	            	    <label for="townhome">Townhome</label>
+	            	    <input type="checkbox" value="Condo" id="condo" name="type" />
+	            	    <label for="condo">Condo</label>
+	            	</div>
+	                         
+	                    
+	                <div data-role="fieldcontain" id="priceRange">
+	                    <label for="price">Price Range:</label>
+	                    <input type="range" id="price" min="50000" max="500000" step="10000" onchange="slideNumber(this.value)" /><span id="slidevalue">0</span>
+	                </div>
+	                   
+	                <div data-role="fieldcontain">    
+	                    <label for="">Min Bedrooms:</label>
+	                    <ul id="numBed">
+	                        <li id="bed"></li>
+	                            <!-- <li>
+	        	                    <select id="bedrooms">
+	        	                        <option value="One">One +</option>
+	        	                        <option value="Two">Two +</option>
+	        	                        <option value="Three">Three +</option>
+	        	                    </select> 
+	                            </li> -->
+	                    </ul>
+	                </div>
+	                    
+	                <div id="textArea">
+	                    <label for="additional">Comments:</label>
+	                    <textarea id="additional" placeholder="Additional Info"></textarea>
+	                </div>
+	                
+	                <div id="hideme">
+	                    <input type="hidden" id="hide" />
+	                </div>
+	                 
+	            
+	            <input type="button" name="newLead" value="New Lead!" id="submit" />
+	            
+	            <!-- Original Search Feature -->
+	            <!-- <fieldset>
+	                <legend>Search</legend>
+	                <ul>
+	            	    <li><label for="search">Search:</label><input type="text" id="search" placeholder="Search" size="30" /></li>
+	                </ul>
+	            </fieldset>
+	            <input type="button" name="searchButton" value="Search" id="searchButton" />
+	            -->
+	        </form>
+	        <!-- <div id="results"></div> -->
+	    </div>
+	    <div data-role="footer" data-theme="d">
+	        <h4>Footer</h4>
+	    </div>
+	</div>
+	
+	<!-- Search Page -->
+	<div data-role="page" id="search" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="d">
+	        <h1>Search</h1>
+	    </div>
+	    <div data-role="content">
+	        <label for="search">Search:</label>
+	        <input type="text" id="search" placeholder="Search" /></li>
+	        <input type="button" name="searchButton" value="Search" id="searchButton" />
+	    </div>
+	    
+	    <div id="results">
+	        <p>Results:</p>
+	    </div>
+	    
 	    <div data-role="footer" data-position="fixed" data-theme="d">
 	        <h4>Footer</h4>
 	    </div>
