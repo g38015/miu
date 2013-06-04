@@ -254,7 +254,7 @@ window.addEventListener("DOMContentLoaded", function() {
          var typeCheck = JSON.parse(value);  
          for (var i = 0; i < checkbox.length; i++) {
              console.log("display 3 times looped 3 checkboxes");
-             for (var j = 0; i < typeCheck.length; j++) {
+             for (var j = 0; j < typeCheck.length; j++) {
                  if (checkbox[i].value === typeCheck[j]) {
                      checkbox[i].setAttribute("checked", "checked")
                      

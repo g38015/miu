@@ -16,8 +16,8 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-	<!-- <link rel="stylesheet" href="css/jqm.css" />
-	<link rel="stylesheet" href="css/styles.css" type="only screen and (max-width: 485px)" /> -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- <link rel="stylesheet" href="css/styles.css" type="only screen and (max-width: 485px)" /> -->
 	
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -32,19 +32,21 @@
 	        <h1>Lead Tracker</h1>
 	    </div>
 	    <div id="feature">
-	        <p>Feature</p>
+	        <p>Track Your Real Estate Leads!</p>
+	        <!-- <img src="images/2.jpg" alt="Pulpit rock" width="100%" height="150"> -->
+	        <a href="additem.html" class="ui-btn-right" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-theme="b" data-ajax="false">Add New Lead</a>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-filter="true" data-ajax="false" data-inset="true" data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt">
-	            <li data-role="list-divider">Browse Lead Category</li>
+	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt">
+	            <li data-role="list-divider">Browse by Lead Category</li>
 	            <li><a href="#type">Home Type</a></li>
 	            <li><a href="#bedrooms">Number of Bedrooms</a></li>
 	            <li><a href="#price">Price Range</a></li>
 	            <li data-role="list-divider">Divider</li>
 	            <li><a href="#ready">Ready to Buy?</a></li>
 	            <li><a href="additem.html">CRUD</a></li>
-	            <li><a href="#newLead">Enter New Lead</a></li>
-	            <li><a href="#search">Search</a></li>
+	            <li><a href="#newLead" data-ajax="false">Enter New Lead</a></li>
+	            <li data-icon="search"><a href="#search">Search</a></li>
 	        </ul>
 	    </div>
 	    <div data-role="footer" data-theme="d">
