@@ -28,16 +28,16 @@
 
     <!-- Home Page -->
 	<div data-role="page" id="home">
-	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Lead Tracker</h1>
+	    <div data-role="header" data-position="fixed" data-theme="a">
+	        <h1>Lead Manager</h1>
 	    </div>
 	    <div id="feature">
-	        <p>Track Your Real Estate Leads!</p>
-	        <!-- <img src="images/2.jpg" alt="Pulpit rock" width="100%" height="150"> -->
-	        <a href="additem.html" class="ui-btn-right" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-theme="b" data-ajax="false">Add New Lead</a>
+	        <h3 class="img">Close More Deals Manage Your Leads!</h3>
+	        <img src="images/chart.png" id="img">
+	        <a href="additem.html" id="btn" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-theme="b" data-ajax="false">Add New Lead</a>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt">
+	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
 	            <li data-role="list-divider">Browse by Lead Category</li>
 	            <li><a href="#type">Home Type</a></li>
 	            <li><a href="#bedrooms">Number of Bedrooms</a></li>
@@ -49,7 +49,7 @@
 	            <li data-icon="search"><a href="#search">Search</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-theme="d">
+	    <div data-role="footer" data-theme="a">
 	        <h4>Footer</h4>
 	    </div>
 	</div>
@@ -217,7 +217,7 @@
 	        <p>Results:</p>
 	    </div>
 	    
-	    <div data-role="footer" data-position="fixed" data-theme="d">
+	    <div id="footer" data-role="footer" data-position="fixed" data-theme="d">
 	        <h4>Footer</h4>
 	    </div>
 	</div>
