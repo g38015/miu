@@ -9,17 +9,20 @@ June 5, 2013
     margin: 0 auto;
     padding: 20px;
     width: 100%;
-    box-shadow: 2px 3px 65px #444;
+    box-shadow: 3px 3px 10px #444;
     position: relative;
-    height: 100px;
+    height: 125px;
+    background-color: #e4e5e6;
 }
 
 #feature h3 {
     
     position: absolute;
     z-index: 90;
+    bottom: 120px;
 }
 
+/*
 #img {
     position: absolute;
     left: 0;
@@ -30,11 +33,16 @@ June 5, 2013
     opacity: 0.9;
 
 }
+*/
 
 #btn {
     position: absolute;
     left: 170px;
     top: 80px;
+}
+
+#canvas{
+
 }
 
 
