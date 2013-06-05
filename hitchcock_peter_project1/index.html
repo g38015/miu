@@ -17,8 +17,6 @@
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	<!-- <link rel="stylesheet" href="css/styles.css" type="only screen and (max-width: 485px)" /> -->
-	
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -31,78 +29,96 @@
 	    <div data-role="header" data-position="fixed" data-theme="b">
 	        <h1>Lead Manager</h1>
 	    </div>
+	    <!-- Feature -->
 	    <div id="feature">
 	        <h3 class="img">Close More Deals Manage Your Leads!</h3>
 	        <img src="images/chart2.png" id="img">
 	        <a href="additem.html" id="btn" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-theme="b" data-ajax="false">Add New Lead</a>
 	    </div>
+	    <!-- Browse and Search -->
 	    <div data-role="content">
 	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
-	            <li data-role="list-divider" data-theme="b">Browse by Lead Category</li>
-	            <li><a href="#type">Home Type</a></li>
-	            <li><a href="#bedrooms">Number of Bedrooms</a></li>
+	            <li data-role="list-divider" data-theme="b">Browse by Lead Info</li>
+	            <li><a href="#name">Name</a></li>
+	            <li><a href="#email">Email</a></li>
+	            <li><a href="#date">Date</a></li>
+	            <li data-role="list-divider"  data-theme="b">Browse By Property Info</li>
+	            <li><a href="#type">Property Type</a></li>
 	            <li><a href="#price">Price Range</a></li>
-	            <li data-role="list-divider"  data-theme="b">Divider</li>
-	            <li><a href="#ready">Ready to Buy?</a></li>
-	            <li><a href="additem.html">CRUD</a></li>
-	            <li><a href="#newLead" data-ajax="false">Enter New Lead</a></li>
-	            <li data-icon="search"><a href="#search">Search</a></li>
+	            <li><a href="#bedrooms">Min Number of Bedrooms</a></li>
+	            <li><a href="additem.html" data-ajax="false">Enter New Lead</a></li>
+	            <li data-icon="search"><a href="#search">Advanced Search</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-theme="b">
-	        <h4>Footer</h4>
+	    <div data-role="navbar">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
 	    </div>
 	</div>
 	
 	<!-- 2nd Page -->
-	<div data-role="page" id="type" data-add-back-btn="true">
-	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Home Type</h1>
+	<div data-role="page" id="name" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Name</h1>
 	    </div>
 	    <div data-role="content">
-	        <p>Nothing Yet!</p>
+	        <p>No Results, Please Enter a New Lead with a Name.</p>
 	    </div>
-	    <div data-role="footer" data-position="fixed" data-theme="d">
-	        <h4>Footer</h4>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
 	    </div>
 	</div>
 	
 	<!-- 3rd Page -->
-	<div data-role="page" id="bedrooms" data-add-back-btn="true">
-	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Number of Bedrooms</h1>
+	<div data-role="page" id="email" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Email</h1>
 	    </div>
 	    <div data-role="content">
-	        <p>Nothing Yet!</p>
+	        <p>No Results, Please Enter a New Lead with a Email</p>
 	    </div>
-	    <div data-role="footer" data-position="fixed" data-theme="d">
-	        <h4>Footer</h4>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
 	    </div>
 	</div>
 	
 	<!-- 4th Page -->
-	<div data-role="page" id="price" data-add-back-btn="true">
-	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Price Range</h1>
+	<div data-role="page" id="date" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Date</h1>
 	    </div>
 	    <div data-role="content">
-	        <p>Nothing Yet!</p>
+	        <p>No Results, Please Enter a New Lead with a Date</p>
 	    </div>
-	    <div data-role="footer" data-position="fixed" data-theme="d">
-	        <h4>Footer</h4>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
 	    </div>
 	</div>
 	
 	<!-- 5th Page -->
-	<div data-role="page" id="ready" data-add-back-btn="true">
-	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Ready to Buy?</h1>
+	<div data-role="page" id="type" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Property Type</h1>
 	    </div>
 	    <div data-role="content">
-	        <p>Nothing Yet!</p>
+	        <p>No Results, Please Enter a New Lead with a Property Type</p>
 	    </div>
-	    <div data-role="footer" data-position="fixed" data-theme="d">
-	        <h4>Footer</h4>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
 	    </div>
 	</div>
 	
@@ -113,11 +129,9 @@
 	        <h1>New Lead</h1>
 	    </div>
 	    <div data-role="content">
-	    
 	        <a href="#" id="clear" data-role="button">Delete Leads</a>
 	        <a href="#" id="displayLink" data-role="button">Show Leads</a>
 	        <a href="#newLead" id="addNew" data-role="button">Add New</a>
-	        
 	        <form action="#" method="post" id="contactForm" name="leadForm">
 	            
 	                <div id="errors">
@@ -153,7 +167,6 @@
 	            	    <label for="condo">Condo</label>
 	            	</div>
 	                         
-	                    
 	                <div data-role="fieldcontain" id="priceRange">
 	                    <label for="price">Price Range:</label>
 	                    <input type="range" id="price" min="50000" max="500000" step="10000" onchange="slideNumber(this.value)" /><span id="slidevalue">0</span>
@@ -202,12 +215,45 @@
 	    </div>
 	</div> -->
 	
-	<!-- Search Page -->
-	<div data-role="page" id="search" data-add-back-btn="true">
-	    <div data-role="header" data-position="fixed" data-theme="d">
-	        <h1>Search</h1>
+	<!-- 6th Page -->
+	<div data-role="page" id="price" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Price Range</h1>
 	    </div>
 	    <div data-role="content">
+	        <p>No Results, Please Enter a New Lead with a Price Range.</p>
+	    </div>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
+	    </div>
+	</div>
+	
+	<!-- 7th Page -->
+	<div data-role="page" id="bedrooms" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Minimum Bedrooms</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>No Results, Please Enter a New Lead with a Bedroom Count</p>
+	    </div>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
+	    </div>
+	</div>
+	
+	<!-- Advanced Search Page -->
+	<div data-role="page" id="search" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Advanced Search</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>Advanced Search is Offline...</p>
 	        <label for="search">Search:</label>
 	        <input type="text" id="search" placeholder="Search" />
 	        <input type="button" name="searchButton" value="Search" id="searchButton" />
@@ -217,16 +263,18 @@
 	        <p>Results:</p>
 	    </div>
 	    
-	    <div id="footer" data-role="footer" data-position="fixed" data-theme="d">
-	        <h4>Footer</h4>
+	    <div data-role="navbar" data-position="fixed">
+	        <ul>
+	            <li><a href="additem.html" class="ui-btn-active" data-ajax="false">Add Lead</a></li>
+	            <li><a href="#home">Browse</a></li>
+	        </ul>
 	    </div>
 	</div>
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-	<!-- <script src="js/json.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script> -->
-    <!-- <script src="js/jqm.js" type="text/javascript"></script> -->
+	
+	
 </body>
 </html>
