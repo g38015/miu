@@ -29,17 +29,13 @@ window.addEventListener("DOMContentLoaded", function() {
 
      
      // Find value of selected checkbox (this function has issue of retuning all values it loops through only returns one value
-     function getCheckbox() {
-              var checks = document.forms[0].type;
-              //var selectedCheckboxes = [];
-              for (var i = 0, j=checks.length; i < j; i++) {
-                  if(checks[i].checked) {
-                  var propertyChecked = checks[i].value;
-                  selectedCheckboxes.push(propertyChecked);
-                  
-                  }   
-              }
-              //return selectedCheckboxes;
+     function getSelectedRadio() {
+              var radios = document.forms[0].type;
+              for (var i = 0; i < radios.length; i++) {
+                  if (radios[i].checked) {
+                      typeValue = radios[i].value;
+                  }  
+              }   
       }
      
      // Function toggles form, hides form once show leads is tapped or clicked.
@@ -76,13 +72,13 @@ window.addEventListener("DOMContentLoaded", function() {
          }
          // Get all form field values and store in object
          // Object properties contain array form label and input value
-         getCheckbox();
+         getSelectedRadio();
          var lead           = {};
              lead.name      = ["Name:", $("name").value];
              lead.phone     = ["Phone:", $("phone").value];
              lead.email     = ["Email:", $("email").value];
              lead.date      = ["Date:", $("date").value];
-             lead.check     = ["Checked:", selectedCheckboxes];
+             lead.type      = ["Checked:", typeValue];
              lead.price     = ["Price:", $("price").value];
              lead.bedrooms  = ["Bedrooms:", $("bedrooms").value];
              lead.info      = ["Info:", $("additional").value];
@@ -248,17 +244,15 @@ window.addEventListener("DOMContentLoaded", function() {
          $("bedrooms").value = lead.bedrooms[1];
          $("additional").value = lead.info[1];
                   
-         // Checkboxes
-         var checkbox = document.forms[0].type;
-         var key = localStorage.key(selectedCheckboxes);
-         var typeCheck = JSON.parse(value);  
-         for (var i = 0; i < checkbox.length; i++) {
-             console.log("display 3 times looped 3 checkboxes");
-             for (var j = 0; j < typeCheck.length; j++) {
-                 if (checkbox[i].value === typeCheck[j]) {
-                     checkbox[i].setAttribute("checked", "checked")
-                     
-                 }
+         // Radio
+         var radios = document.forms[0].type; 
+         for(var i = 0; i < radios.length; i++){
+             if(radios[i].value == "Sfr" && lead.type[1] == "Sfr"){
+                 radios[i].setAttribute("checked", "checked");
+             } else if(radios[i].value == "Townhome" && lead.type[1] == "Townhome"){
+                 radios[i].setAttribute("checked", "checked");
+             } else if(radios[i].value == "Condo" && lead.type[1] == "Condo"){
+                 radios[i].setAttribute("checked", "checked");
              }
          }
          
@@ -337,7 +331,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     // Var Defaults
     var numberOfBedrooms = ["1+", "2+", "3+"],
-        selectedCheckboxes = []
+        typeValue
         ;
     makeBedrooms();
     
