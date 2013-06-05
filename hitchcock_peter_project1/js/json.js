@@ -1,4 +1,7 @@
-// JSON Lead Data to Populate
+// 20 JSON Lead Data to Populate
+// MIU 1306
+// Peter Hitchcock
+// Project 1
 
 var json = {
 

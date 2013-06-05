@@ -1,5 +1,5 @@
-// Project 4
-// Visual Frameworks 1305
+// Project 1
+// MIU 1306
 // Peter Hitchcock
 
 // Wait until the DOM is ready
