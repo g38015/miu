@@ -1,5 +1,5 @@
 var lineChart = {
-			labels : ["Jan","Feb","Mar","Apr","May","Jun","Jul"],
+			labels : [" "," "," "," "," "," "," "],
 			datasets : [
 				{
 					fillColor : "rgba(220,220,220,0.5)",

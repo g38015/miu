@@ -8,11 +8,10 @@ June 5, 2013
 #feature {
     margin: 0 auto;
     padding: 20px;
-    width: 100%;
     box-shadow: 3px 3px 10px #444;
     position: relative;
     height: 125px;
-    background-color: #e4e5e6;
+    background-color: #fff;
 }
 
 #feature h3 {
@@ -20,6 +19,7 @@ June 5, 2013
     position: absolute;
     z-index: 90;
     bottom: 120px;
+    left: 40px;
 }
 
 /*
@@ -37,12 +37,12 @@ June 5, 2013
 
 #btn {
     position: absolute;
-    left: 170px;
-    top: 80px;
+    left: 85px;
+    top: 125px;
 }
 
 #canvas{
-
+    
 }
 
 
