@@ -1,3 +1,6 @@
-gh-pages link:
+Gold gh-pages link:
 
 http://g38015.github.io/miu/hitchcock_peter_project2/
+
+Bronze gh-pages link:
+

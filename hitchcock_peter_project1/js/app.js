@@ -1,0 +1,1 @@
+$mobile.changePage("#home",{transition:"slide"}
