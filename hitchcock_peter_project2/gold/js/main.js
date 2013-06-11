@@ -6,7 +6,7 @@
 window.addEventListener("DOMContentLoaded", function() {
 
     // getElementsById Function
-    function $(x) {
+    function xyz(x) {
         var getElement = document.getElementById(x);
         return getElement;
     }
@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function() {
     // Function creates a select Field Element and Populates with Options
     function makeBedrooms() {
         var formTag = document.getElementsByTagName("form"), // Target Form Tag
-            createSelectLi = $("bed"), // Finds Element Called bed, targets in HTML
+            createSelectLi = xyz("bed"), // Finds Element Called bed, targets in HTML
             createSelect = document.createElement("select"); // Creates Select Element
             createSelect.setAttribute("id", "bedrooms"); // Sets Attribute id="bedrooms"
         for(var i=0, j=numberOfBedrooms.length; i<j; i++){ // Populates Select Tage with Array numberOfBedrooms
@@ -42,17 +42,17 @@ window.addEventListener("DOMContentLoaded", function() {
      function toggleLeads(n) {
          switch(n) {
              case "on":
-                 $("contactForm").style.display = "none";
-                 $("clear").style.display = "inline";
-                 $("displayLink").style.display = "none";
-                 $("addNew").style.display = "inline";
+                 xyz("contactForm").style.display = "none";
+                 xyz("clear").style.display = "inline";
+                 xyz("displayLink").style.display = "none";
+                 xyz("addNew").style.display = "inline";
                  break;
              case "off":
-                 $("contactForm").style.display = "block";
-                 $("clear").style.display = "inline";
-                 $("displayLink").style.display = "inline";
-                 $("addNew").style.display = "none";
-                 $("leads").style.display = "none";
+                 xyz("contactForm").style.display = "block";
+                 xyz("clear").style.display = "inline";
+                 xyz("displayLink").style.display = "inline";
+                 xyz("addNew").style.display = "none";
+                 xyz("leads").style.display = "none";
                  break;
              default:
                  return false;
@@ -74,15 +74,15 @@ window.addEventListener("DOMContentLoaded", function() {
          // Object properties contain array form label and input value
          getSelectedRadio();
          var lead           = {};
-             lead.name      = ["Name:", $("name").value];
-             lead.phone     = ["Phone:", $("phone").value];
-             lead.email     = ["Email:", $("email").value];
-             lead.date      = ["Date:", $("date").value];
+             lead.name      = ["Name:", xyz("name").value];
+             lead.phone     = ["Phone:", xyz("phone").value];
+             lead.email     = ["Email:", xyz("email").value];
+             lead.date      = ["Date:", xyz("date").value];
              lead.type      = ["Checked:", typeValue];
-             lead.price     = ["Price:", $("price").value];
-             lead.bedrooms  = ["Bedrooms:", $("bedrooms").value];
-             lead.info      = ["Info:", $("additional").value];
-             lead.hidden    = ["Hidden:", $("hideme").value];
+             lead.price     = ["Price:", xyz("price").value];
+             lead.bedrooms  = ["Bedrooms:", xyz("bedrooms").value];
+             lead.info      = ["Info:", xyz("additional").value];
+             lead.hidden    = ["Hidden:", xyz("hideme").value];
              
              
          // Save data to local storage Use stringify to convert object to a string
@@ -104,7 +104,7 @@ window.addEventListener("DOMContentLoaded", function() {
                  var newList = document.createElement("ul");
                  createDiv.appendChild(newList);
                  document.body.appendChild(createDiv);
-                 $("leads").style.display = "block";
+                 xyz("leads").style.display = "block";
                  for (var i = 0, len=localStorage.length; i<len; i++) {
                      var newLi = document.createElement("li");
                      var linkLi = document.createElement("li");
@@ -129,10 +129,10 @@ window.addEventListener("DOMContentLoaded", function() {
      }
      
      // Search Function
-     var searchButton = $('searchButton');
+     var searchButton = xyz('searchButton');
      
      function leadSearch() {
-         var query = $('search').value;
+         var query = xyz('search').value;
         
          // Only searching by query
          if (query != "") {
@@ -236,13 +236,13 @@ window.addEventListener("DOMContentLoaded", function() {
          toggleLeads("off");
      
          // Populate Form Fields
-         $("name").value = lead.name[1];
-         $("phone").value = lead.phone[1];
-         $("email").value = lead.email[1];
-         $("date").value = lead.date[1];
-         $("price").value = lead.price[1];
-         $("bedrooms").value = lead.bedrooms[1];
-         $("additional").value = lead.info[1];
+         xyz("name").value = lead.name[1];
+         xyz("phone").value = lead.phone[1];
+         xyz("email").value = lead.email[1];
+         xyz("date").value = lead.date[1];
+         xyz("price").value = lead.price[1];
+         xyz("bedrooms").value = lead.bedrooms[1];
+         xyz("additional").value = lead.info[1];
                   
          // Radio
          var radios = document.forms[0].type; 
@@ -260,8 +260,8 @@ window.addEventListener("DOMContentLoaded", function() {
          // Remove Listener from Input
          save.removeEventListener("click", storeLeads);
          // Change Submit to Say Edit Button
-         $("submit").value = "Edit Lead";
-         var editSubmitButton = $("submit");
+         xyz("submit").value = "Edit Lead";
+         var editSubmitButton = xyz("submit");
          // Save the Key Value Established as a Property of the editSubmit event
          editSubmitButton.addEventListener("click", validation);
          editSubmitButton.key = this.key;
@@ -282,11 +282,11 @@ window.addEventListener("DOMContentLoaded", function() {
      
      function validation(arg) {
          // Define Elements we want to check
-         var validateName = $('name');
-         var validateEmail = $('email');
+         var validateName = xyz('name');
+         var validateEmail = xyz('email');
          
          // Reset Error Message
-         $('errors').innerHTML = "";
+         xyz('errors').innerHTML = "";
          validateName.style.border = "2px solid blue";
          validateEmail.style.border = "2px solid blue";
          
@@ -315,7 +315,7 @@ window.addEventListener("DOMContentLoaded", function() {
              for (var i = 0, j = messageAr.length; i < j; i++) {
                  var txt = document.createElement('li');
                  txt.innerHTML = messageAr[i];
-                 $('errors').appendChild(txt);
+                 xyz('errors').appendChild(txt);
                  
              }
              arg.preventDefault();
@@ -337,11 +337,11 @@ window.addEventListener("DOMContentLoaded", function() {
     
     
     // Set Link and Submit Click Events
-    var display = $("displayLink");
+    var display = xyz("displayLink");
     display.addEventListener("click", getLeads);
-    var clear = $("clear");
+    var clear = xyz("clear");
     clear.addEventListener("click", clearLeads);
-    var save = $("submit");
+    var save = xyz("submit");
     save.addEventListener("click", validation);
 
 });
