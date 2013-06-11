@@ -193,17 +193,17 @@
 	    <div data-role="content">
 	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
 	            <li data-role="list-divider" data-theme="b">Info</li>
-	            <li><a href="#name">Home</a></li>
-	            <li><a href="#">About</a></li>
-	            <li><a href="#">Gold App</a></li>
-	            <li><a href="#">Bronze App</a></li>
+	            <li data-icon="home"><a href="#name">Home</a></li>
+	            <li data-icon="grid"><a href="#">About</a></li>
+	            <li data-icon="star"><a href="#">Gold App</a></li>
+	            <li data-icon="bars"><a href="#">Bronze App</a></li>
 	            <li data-role="list-divider"  data-theme="b">Git</li>
-	            <li><a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false">Gold Live</a></li>
-	            <li><a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false">Bronze Live</a></li>
-	            <li><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/gold" data-ajax="false">Gold Code</a></li>
-	            <li><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false">Bronze Code</a></li>
+	            <li data-icon="star"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false">Gold Live</a></li>
+	            <li data-icon="bars"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false">Bronze Live</a></li>
+	            <li data-icon="star"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/gold" data-ajax="false">Gold Code</a></li>
+	            <li data-icon="bars"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false">Bronze Code</a></li>
 	            <li data-role="list-divider"  data-theme="b">Credits</li>
-	            <li data-icon="search"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
+	            <li data-icon="info"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
 	        </ul>
 	    </div>
 	    
@@ -222,10 +222,35 @@
 	<!-- News Page -->
 	<div data-role="page" id="news" data-add-back-btn="true">
 	    <div data-role="header" data-position="fixed" data-theme="b">
-	        <h1>Info</h1>
+	        <h1>News Stream</h1>
 	    </div>
 	    <div data-role="content">
-	        <p>News</p>  
+	    <!-- NEWS STREAM SAMPLE -->
+	        <ul data-role="listview" data-inset="true">
+	            <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+	            <li><a href="index.html">
+	                <img src="images/news.png">
+	                <h2>Stephen Weber</h2>
+	                <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+	                <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+	                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+	            </a></li>
+	            <li><a href="index.html">
+	                <img src="images/news.png">
+	                <h2>jQuery Team</h2>
+	                <p><strong>Boston Conference Planning</strong></p>
+	                <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+	                <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+	            </a></li>
+	            <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+	            <li><a href="index.html">
+	                <img src="images/news.png">
+	                <h2>Avery Walker</h2>
+	                <p><strong>Re: Dinner Tonight</strong></p>
+	                <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+	                <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+	            </a></li>
+	        </ul>  
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
 	    	<div data-role="navbar">
