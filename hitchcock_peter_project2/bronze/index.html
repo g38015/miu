@@ -1,5 +1,5 @@
 <!doctype html>  
-<!-- Project 1 Peter Hitchcock MIU 1305 -->
+<!-- Project 2 BRONZE APP Peter Hitchcock MIU 1306 -->
 <html lang="en">
 <head>
 
@@ -38,35 +38,44 @@
         </div>
         <!-- Browse and Search -->
         <div data-role="content">
-
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-collapsed="false">
                 <h3>Name</h3>
-                <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt">
-                    <li><a href="#">Peter</a></li>
-                    <li><a href="#">Ellie</a></li>
-                    <li><a href="#">Lauren</a></li>
-                    <li><a href="#">Dayle</a></li>
-                    <li><a href="#">Sammy</a></li>
-                    <li><a href="#">Ruby</a></li>
+                <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search by Name" class="ui-icon-alt">
+                    <li><a href="#info1">Peter</a></li>
+                    <li><a href="#info2">Ellie</a></li>
+                    <li><a href="#info3">Ruby</a></li>
                 </ul>
             </div>
             <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
                 <h3>Email</h3>
-                <ul data-role="listview">
-                    <li><a href="#">test@test.com</a></li>
-                    <li><a href="#">test@test.com</a></li>
-                    <li><a href="#">test@test.com</a></li>
-                    <li><a href="#">test@test.com</a></li>
-                    <li><a href="#">test@test.com</a></li>
-                    <li><a href="#">test@test.com</a></li>
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Email">
+                    <li><a href="#info1">peter@gmail.com</a></li>
+                    <li><a href="#info2">ellie@gmail.com</a></li>
+                    <li><a href="#info3">ruby@gmail.com</a></li>
                 </ul>
-            </div>            
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+            </div>
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
+                <h3>Date</h3>
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Date">
+                    <li><a href="#info1">Monday June 10, 2013</a></li>
+                    <li><a href="#info2">Wednesday June 12, 2013</a></li>
+                    <li><a href="#info3">Friday June 14, 2013</a></li>
+                </ul>
+            </div><!-- /collapsible -->            
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
                 <h3>Property Type</h3>
-                <ul data-role="listview">
-                    <li><a href="#">Townhome</a></li>
-                    <li><a href="#">Condo</a></li>
-                    <li><a href="#">Single Family</a></li>
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Type">
+                    <li><a href="#info1">Townhome</a></li>
+                    <li><a href="#info2">Condo</a></li>
+                    <li><a href="#info3">Single Family</a></li>
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
+                <h3>Number of Bedrooms</h3>
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Bedrooms">
+                    <li><a href="#info1">1+</a></li>
+                    <li><a href="#info2">2+</a></li>
+                    <li><a href="#info3">3+</a></li>
                 </ul>
             </div><!-- /collapsible -->
         </div>
@@ -89,7 +98,6 @@
         </div>
         <div data-role="content">
             <p>No Results, Please Enter a New Lead with a Name.</p>
-            
         </div>
         <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
         	<div data-role="navbar">
@@ -299,14 +307,14 @@
             <!-- NEWS STREAM SAMPLE -->
                 <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
                     <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
-                    <li><a href="index.html">
+                    <li><a href="#error">
                         <img src="images/news.png">
                         <h2>Stephen Weber</h2>
                         <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
                         <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
                         <p class="ui-li-aside"><strong>6:24</strong>PM</p>
                     </a></li>
-                    <li><a href="index.html">
+                    <li><a href="#error">
                         <img src="images/news.png">
                         <h2>jQuery Team</h2>
                         <p><strong>Boston Conference Planning</strong></p>
@@ -314,7 +322,7 @@
                         <p class="ui-li-aside"><strong>9:18</strong>AM</p>
                     </a></li>
                     <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
-                    <li><a href="index.html">
+                    <li><a href="#error">
                         <img src="images/news.png">
                         <h2>Avery Walker</h2>
                         <p><strong>Re: Dinner Tonight</strong></p>
@@ -322,7 +330,6 @@
                         <p class="ui-li-aside"><strong>4:48</strong>PM</p>
                     </a></li>
                 </ul>  
-            
         </div>
         <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
         	<div data-role="navbar">
@@ -336,6 +343,105 @@
         </div><!-- /footer -->    
     </div>
     
+    <!-- Lead Info Page 1 -->
+    <div data-role="page" id="info1" data-add-back-btn="true">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>Lead Info</h1>
+        </div>
+        <div data-role="content">
+            <div align="center">
+                <h3>Name: Peter</h3>
+                <p>Email: peter@gmail.com</p>
+                <p>Date: June 11, 2013</p>
+                <p>Property Type: Single Family Residence</p>
+                <p>Number of Bedrooms: 1+</p>
+            </div>
+        </div>
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        	<div data-role="navbar">
+        		<ul>
+        			<li><a href="#home">Home</a></li>
+        			<li><a href="#info">Info</a></li>
+        			<li><a href="#news">News</a></li>
+        			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
+        		</ul>
+        	</div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    
+    <!-- Lead Info Page 2 -->
+    <div data-role="page" id="info2" data-add-back-btn="true">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>Lead Info</h1>
+        </div>
+        <div data-role="content">
+            <div align="center">
+                <h3>Name: Ellie</h3>
+                <p>Email: ellie@gmail.com</p>
+                <p>Date: June 12, 2013</p>
+                <p>Property Type: Townhome</p>
+                <p>Number of Bedrooms: 2+</p>
+            </div>
+        </div>
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        	<div data-role="navbar">
+        		<ul>
+        			<li><a href="#home">Home</a></li>
+        			<li><a href="#info">Info</a></li>
+        			<li><a href="#news">News</a></li>
+        			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
+        		</ul>
+        	</div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    
+    <!-- Lead Info Page 3 -->
+    <div data-role="page" id="info3" data-add-back-btn="true">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>Lead Info</h1>
+        </div>
+        <div data-role="content">
+            <div align="center">
+                <h3>Name: Ruby</h3>
+                <p>Email: ruby@gmail.com</p>
+                <p>Date: June 14, 2013</p>
+                <p>Property Type: Condo</p>
+                <p>Number of Bedrooms: 3+</p>
+            </div>
+        </div>
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        	<div data-role="navbar">
+        		<ul>
+        			<li><a href="#home">Home</a></li>
+        			<li><a href="#info">Info</a></li>
+        			<li><a href="#news">News</a></li>
+        			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
+        		</ul>
+        	</div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    
+    <!-- Error -->
+    <div data-role="page" id="error" data-add-back-btn="true">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <h1>Error 404</h1>
+        </div>
+        <div data-role="content">
+            <div align="center">
+                <p>News Feed is Currently Down</p>
+            </div>
+        </div>
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        	<div data-role="navbar">
+        		<ul>
+        			<li><a href="#home">Home</a></li>
+        			<li><a href="#info">Info</a></li>
+        			<li><a href="#news">News</a></li>
+        			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
+        		</ul>
+        	</div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
     
     <!-- Advanced Search Page -->
     <div data-role="page" id="search" data-add-back-btn="true">
@@ -365,13 +471,9 @@
         </div><!-- /footer -->
     </div>
     
-    
-    
-    
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-	
 	
 	<!-- Chart.js script Used as Animated Chart in Feature Section -->
 	<script src="js/libs/chart.js"></script>

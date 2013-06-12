@@ -20,3 +20,12 @@ var lineChart = {
 		}
 
 var newLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChart);
+
+
+
+
+
+
+
+
+
