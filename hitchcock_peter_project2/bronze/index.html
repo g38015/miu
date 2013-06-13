@@ -31,10 +31,11 @@
         </div>
         <!-- Feature -->
         <div id="feature">
-            <h3 class="img">Start Closing More Deals!</h3>
-            <!-- <img src="images/chart2.png" id="img"> -->
-            <canvas id="canvas" height="125"></canvas>
-            <a href="additem.html" id="btn" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" data-inline="true" data-theme="b" data-ajax="false">Add a New Lead...</a>
+            <div align="center">
+                <h3>Start Closing More Deals!</h3>
+                <canvas id="canvas" height="125px"></canvas>
+                <a href="additem.html" id="btn" data-role="button" data-inline="true" data-theme="b" data-ajax="false" >Add a New Lead</a>
+            </div>
         </div>
         <!-- Browse and Search -->
         <div data-role="content">
@@ -72,7 +73,7 @@
             </div><!-- /collapsible -->
             <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
                 <h3>Number of Bedrooms</h3>
-                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Bedrooms">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Bedrooms" id="list">
                     <li><a href="#info1">1+</a></li>
                     <li><a href="#info2">2+</a></li>
                     <li><a href="#info3">3+</a></li>
@@ -217,16 +218,17 @@
             <h1>Info</h1>
         </div>
         <div data-role="content">
-            <div class="ui-grid-a" >
+            <div align="center"><canvas id="canvas1" height="125"></canvas></div>
+            <div class="ui-grid-a" align="center">
                 <a href="#home"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Home</p>
                     <img src="images/news.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="#about"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>About</p>
                     <img src="images/news.png" height="50px">
                 </div>
@@ -234,16 +236,16 @@
                 </a>
             </div><!-- /grid-a -->
             
-            <div class="ui-grid-a">
+            <div class="ui-grid-a" align="center">
                 <a href="#"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Gold App</p>
                     <img src="images/news.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="#"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Bronze App</p>
                     <img src="images/news.png" height="50px">
                 </div>
@@ -251,16 +253,16 @@
                 </a>
             </div><!-- /grid-a -->
             
-            <div class="ui-grid-a">
+            <div class="ui-grid-a" align="center">
                 <a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Gold Live</p>
                     <img src="images/news.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Bronze Live</p>
                     <img src="images/news.png" height="50px">
                 </div>
@@ -268,16 +270,16 @@
                 </a>
             </div><!-- /grid-a -->
             
-            <div class="ui-grid-a">
+            <div class="ui-grid-a" align="center">
                 <a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/gold" data-ajax="false"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Gold Github</p>
                     <img src="images/news.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-b">
+                <div class="ui-bar ui-bar-c">
                     <p>Bronze Github</p>
                     <img src="images/news.png" height="50px">
                 </div>
@@ -444,6 +446,7 @@
     </div>
     
     <!-- Advanced Search Page -->
+    <!--
     <div data-role="page" id="search" data-add-back-btn="true">
         <div data-role="header" data-position="fixed" data-theme="b">
             <h1>Advanced Search</h1>
@@ -467,9 +470,10 @@
         			<li><a href="#news">News</a></li>
         			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
         		</ul>
-        	</div><!-- /navbar -->
-        </div><!-- /footer -->
+        	</div>
+        </div>
     </div>
+    -->
     
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
