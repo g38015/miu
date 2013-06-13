@@ -26,33 +26,63 @@
 
     <!-- Home Page -->
     <div data-role="page" id="home">
-        <div data-role="header" data-position="fixed" data-theme="b" >
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><canvas id="canvas" height="100px"></canvas></div>
             <h1>Lead Manager</h1>
         </div>
         <!-- Feature -->
         <div id="feature">
             <div align="center">
                 <h3>Start Closing More Deals!</h3>
-                <canvas id="canvas" height="125px"></canvas>
                 <a href="additem.html" id="btn" data-role="button" data-inline="true" data-theme="b" data-ajax="false" >Add a New Lead</a>
             </div>
         </div>
         <!-- Browse and Search -->
         <div data-role="content">
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-collapsed="false">
+            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
                 <h3>Name</h3>
                 <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search by Name" class="ui-icon-alt">
-                    <li><a href="#info1">Peter</a></li>
-                    <li><a href="#info2">Ellie</a></li>
-                    <li><a href="#info3">Ruby</a></li>
+                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                        <h4>Peter</h4>
+                        <h5>Name: Peter</h5>
+                        <p>Phone: 408-555-1212</p>
+                        <p>Email: peter@gmail.com</p>
+                    </div></li>
+                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                        <h4>Ellie</h4>
+                        <h5>Name: Ellie</h5>
+                        <p>Phone: 415-555-1212</p>
+                        <p>Email: ellie@gmail.com</p>
+                    </div></li>
+                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                        <h4>Ruby</h4>
+                        <h5>Name: Ruby</h5>
+                        <p>Phone: 916-555-1212</p>
+                        <p>Email: ruby@gmail.com</p>
+                    </div></li>
                 </ul>
             </div>
             <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
                 <h3>Email</h3>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Email">
-                    <li><a href="#info1">peter@gmail.com</a></li>
-                    <li><a href="#info2">ellie@gmail.com</a></li>
-                    <li><a href="#info3">ruby@gmail.com</a></li>
+                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                        <h4>peter@gmail.com</h4>
+                        <h5>Name: Peter</h5>
+                        <p>Phone: 408-555-1212</p>
+                        <p>Email: peter@gmail.com</p>
+                    </div></li>
+                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                        <h4>ellie@gmail.com</h4>
+                        <h5>Name: Ellie</h5>
+                        <p>Phone: 415-555-1212</p>
+                        <p>Email: ellie@gmail.com</p>
+                    </div></li>
+                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                        <h4>ruby@gmail.com</h4>
+                        <h5>Name: Ruby</h5>
+                        <p>Phone: 916-555-1212</p>
+                        <p>Email: ruby@gmail.com</p>
+                    </div></li>
                 </ul>
             </div>
             <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
@@ -215,56 +245,41 @@
     <!-- Info Page -->
     <div data-role="page" id="info" data-add-back-btn="true">
         <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
+            <a href="#home" data-icon="arrow-l">Back</a>
             <h1>Info</h1>
         </div>
         <div data-role="content">
-            <div align="center"><canvas id="canvas1" height="125"></canvas></div>
             <div class="ui-grid-a" align="center">
                 <a href="#home"><div class="ui-block-a">
                 <div class="ui-bar ui-bar-c">
                     <p>Home</p>
-                    <img src="images/news.png" height="50px">
+                    <img src="images/pie.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="#about"><div class="ui-block-b">
                 <div class="ui-bar ui-bar-c">
                     <p>About</p>
-                    <img src="images/news.png" height="50px">
+                    <img src="images/pie.png" height="50px">
                 </div>
                 </div>
                 </a>
             </div><!-- /grid-a -->
             
-            <div class="ui-grid-a" align="center">
-                <a href="#"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-c">
-                    <p>Gold App</p>
-                    <img src="images/news.png" height="50px">
-                </div>
-                </div>
-                </a>
-                <a href="#"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-c">
-                    <p>Bronze App</p>
-                    <img src="images/news.png" height="50px">
-                </div>
-                </div>
-                </a>
-            </div><!-- /grid-a -->
             
             <div class="ui-grid-a" align="center">
                 <a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false"><div class="ui-block-a">
                 <div class="ui-bar ui-bar-c">
                     <p>Gold Live</p>
-                    <img src="images/news.png" height="50px">
+                    <img src="images/chart.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false"><div class="ui-block-b">
                 <div class="ui-bar ui-bar-c">
                     <p>Bronze Live</p>
-                    <img src="images/news.png" height="50px">
+                    <img src="images/chart.png" height="50px">
                 </div>
                 </div>
                 </a>
@@ -303,35 +318,37 @@
     <!-- News Page -->
     <div data-role="page" id="news" data-add-back-btn="true">
         <div data-role="header" data-position="fixed" data-theme="b">
-            <h1>News Feed</h1>
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
+            <a href="#home" data-icon="arrow-l">Back</a>
+            <h1>Lead Stream</h1>
         </div>
         <div data-role="content">
-            <!-- NEWS STREAM SAMPLE -->
-                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
-                    <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
-                    <li><a href="#error">
-                        <img src="images/news.png">
-                        <h2>Stephen Weber</h2>
-                        <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-                        <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-                        <p class="ui-li-aside"><strong>6:24</strong>PM</p>
-                    </a></li>
-                    <li><a href="#error">
-                        <img src="images/news.png">
-                        <h2>jQuery Team</h2>
-                        <p><strong>Boston Conference Planning</strong></p>
-                        <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-                        <p class="ui-li-aside"><strong>9:18</strong>AM</p>
-                    </a></li>
-                    <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
-                    <li><a href="#error">
-                        <img src="images/news.png">
-                        <h2>Avery Walker</h2>
-                        <p><strong>Re: Dinner Tonight</strong></p>
-                        <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
-                        <p class="ui-li-aside"><strong>4:48</strong>PM</p>
-                    </a></li>
-                </ul>  
+        <!-- NEWS STREAM SAMPLE -->
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+                <li data-role="list-divider">Thursday, June 13, 2013 <span class="ui-li-count">2</span></li>
+                <li><a href="#error">
+                    <img src="images/pie.png">
+                    <h2>Lauren - New Lead</h2>
+                    <p><strong>Looking for Single Family Home</strong></p>
+                    <p>Email: lauren@gmail.com, Phone: 415-555-1212</p>
+                    <p class="ui-li-aside"><strong>9:27</strong>AM</p>
+                </a></li>
+                <li><a href="#error">
+                    <img src="images/news.png">
+                    <h2>Dayle - New Lead</h2>
+                    <p><strong>Looking for Condo</strong></p>
+                    <p>Email: dayle@gmail.com, Phone: 408-555-1212</p>
+                    <p class="ui-li-aside"><strong>7:32</strong>AM</p>
+                </a></li>
+                <li data-role="list-divider">Wednesday, June 12, 2013  <span class="ui-li-count">1</span></li>
+                <li><a href="#error">
+                    <img src="images/polar.png">
+                    <h2>Sammy - New Lead</h2>
+                    <p><strong>Looking for Townhome</strong></p>
+                    <p>Email: sammy@gmail.com, Phone: 510-555-1212</p>
+                    <p class="ui-li-aside"><strong>4:08</strong>PM</p>
+                </a></li>
+            </ul>  
         </div>
         <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
         	<div data-role="navbar">
@@ -342,12 +359,38 @@
         			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
         		</ul>
         	</div><!-- /navbar -->
-        </div><!-- /footer -->    
+        </div><!-- /footer -->
     </div>
     
+    <!-- About Page -->
+    <div data-role="page" id="about">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
+            <a href="#info" data-icon="arrow-l">Back</a>
+            <h1>About</h1>
+        </div>
+        <div data-role="content">
+            <h3>About Lead Manager</h3>
+            <p>The Lead Manager App was created for Real Estate Agents on the go. Keeping track of your leads is critical in today's competitive market.  Understanding what your customer is looking for at any given time is now possible with the Lead Manager App!</p>
+        </div>
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        	<div data-role="navbar">
+        		<ul>
+        			<li><a href="#home">Home</a></li>
+        			<li><a href="#info">Info</a></li>
+        			<li><a href="#news">News</a></li>
+        			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
+        		</ul>
+        	</div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+    
+        
     <!-- Lead Info Page 1 -->
     <div data-role="page" id="info1" data-add-back-btn="true">
         <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
+            <a href="#home" data-icon="arrow-l">Back</a>
             <h1>Lead Info</h1>
         </div>
         <div data-role="content">
@@ -374,6 +417,8 @@
     <!-- Lead Info Page 2 -->
     <div data-role="page" id="info2" data-add-back-btn="true">
         <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
+            <a href="#home" data-icon="arrow-l">Back</a>
             <h1>Lead Info</h1>
         </div>
         <div data-role="content">
@@ -400,6 +445,8 @@
     <!-- Lead Info Page 3 -->
     <div data-role="page" id="info3" data-add-back-btn="true">
         <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
+            <a href="#home" data-icon="arrow-l">Back</a>
             <h1>Lead Info</h1>
         </div>
         <div data-role="content">
