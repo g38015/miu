@@ -27,13 +27,13 @@
     <!-- Home Page -->
 	<div data-role="page" id="home">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><canvas id="canvas" height="100px"></canvas></div>
 	        <h1>Lead Manager</h1>
 	    </div>
 	    <!-- Feature -->
 	    <div id="feature">
 	        <div align="center">
 	            <h3>Start Closing More Deals!</h3>
-	            <canvas id="canvas" height="125px"></canvas>
 	            <a href="additem.html" id="btn" data-role="button" data-inline="true" data-theme="b" data-ajax="false" >Add a New Lead</a>
 	        </div>
 	    </div>
@@ -66,10 +66,11 @@
 	</div>
 	
 	<!-- 2nd Page -->
-	<div data-role="page" id="name" data-add-back-btn="true">
+	<div data-role="page" id="name">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Back</a>
 	        <h1>Leads by Name</h1>
-	        <div align="center"></div>
 	    </div>
 	    <div data-role="content">
 	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Name">
@@ -92,8 +93,10 @@
 	</div>
 	
 	<!-- 3rd Page -->
-	<div data-role="page" id="email" data-add-back-btn="true">
+	<div data-role="page" id="email">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Back</a>
 	        <h1>Leads by Email</h1>
 	    </div>
 	    <div data-role="content">
@@ -117,8 +120,10 @@
 	</div>
 	
 	<!-- 4th Page -->
-	<div data-role="page" id="date" data-add-back-btn="true">
+	<div data-role="page" id="date">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Back</a>
 	        <h1>Leads by Date</h1>
 	    </div>
 	    <div data-role="content">
@@ -142,8 +147,10 @@
 	</div>
 	
 	<!-- 5th Page -->
-	<div data-role="page" id="type" data-add-back-btn="true">
+	<div data-role="page" id="type">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Back</a>
 	        <h1>Leads by Type</h1>
 	    </div>
 	    <div data-role="content">
@@ -187,12 +194,14 @@
 	</div> -->
 	
 	<!-- 7th Page -->
-	<div data-role="page" id="bedrooms" data-add-back-btn="true">
+	<div data-role="page" id="bedrooms">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Back</a>
 	        <h1>Min Bedrooms</h1>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Number of Minimum Bedrooms">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Bedrooms">
 	            <li data-role="list-divider">Bedroom Count</li>
 	            <li><a href="#info1">1+ Bedrooms</a></li>
 	            <li><a href="#info2">2+ Bedrooms</a></li>
@@ -212,8 +221,10 @@
 	</div>
 	
 	<!-- Info Page -->
-	<div data-role="page" id="info" data-add-back-btn="true">
+	<div data-role="page" id="info">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Home</a>
 	        <h1>Info</h1>
 	    </div>
 	    <!-- Browse and Search -->
@@ -221,16 +232,15 @@
 	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
 	            <li data-role="list-divider" data-theme="b">Info</li>
 	            <li data-icon="home"><a href="#home">Home</a></li>
-	            <li data-icon="grid"><a href="#">About</a></li>
-	            <li data-icon="star"><a href="#">Gold App</a></li>
-	            <li data-icon="bars"><a href="#">Bronze App</a></li>
+	            <li><a href="#about">About</a></li>
+	            <li data-icon=""><a href="#news">Lead Feed</a></li>
 	            <li data-role="list-divider"  data-theme="b">Git</li>
 	            <li data-icon="star"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false">Gold Live</a></li>
-	            <li data-icon="bars"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false">Bronze Live</a></li>
+	            <li data-icon="forward"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false">Bronze Live</a></li>
 	            <li data-icon="star"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/gold" data-ajax="false">Gold Code</a></li>
-	            <li data-icon="bars"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false">Bronze Code</a></li>
+	            <li data-icon="forward"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false">Bronze Code</a></li>
 	            <li data-role="list-divider"  data-theme="b">Credits</li>
-	            <li data-icon="info"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
+	            <li data-icon="check"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
 	        </ul>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
@@ -245,36 +255,62 @@
 	    </div><!-- /footer -->
 	</div>
 	
+	<!-- About Page -->
+	<div data-role="page" id="about">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#info" data-icon="arrow-l">Back</a>
+	        <h1>About</h1>
+	    </div>
+	    <div data-role="content">
+	        <h3>About Lead Manager</h3>
+	        <p>The Lead Manager App was created for Real Estate Agents on the go. Keeping track of your leads is critical in today's competitive market.  Understanding what your customer is looking for at any given time is now possible with the Lead Manager App!</p>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="additem.html" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	
 	<!-- News Page -->
 	<div data-role="page" id="news" data-add-back-btn="true">
 	    <div data-role="header" data-position="fixed" data-theme="b">
-	        <h1>News Stream</h1>
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <h1>Lead Stream</h1>
 	    </div>
 	    <div data-role="content">
 	    <!-- NEWS STREAM SAMPLE -->
 	        <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
-	            <li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+	            <li data-role="list-divider">Thursday, June 13, 2013 <span class="ui-li-count">2</span></li>
 	            <li><a href="#error">
-	                <img src="images/news.png">
-	                <h2>Stephen Weber</h2>
-	                <p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
-	                <p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
-	                <p class="ui-li-aside"><strong>6:24</strong>PM</p>
+	                <img src="images/pie.png">
+	                <h2>Lauren - New Lead</h2>
+	                <p><strong>Looking for Single Family Home</strong></p>
+	                <p>Email: lauren@gmail.com, Phone: 415-555-1212</p>
+	                <p class="ui-li-aside"><strong>9:27</strong>AM</p>
 	            </a></li>
 	            <li><a href="#error">
 	                <img src="images/news.png">
-	                <h2>jQuery Team</h2>
-	                <p><strong>Boston Conference Planning</strong></p>
-	                <p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
-	                <p class="ui-li-aside"><strong>9:18</strong>AM</p>
+	                <h2>Dayle - New Lead</h2>
+	                <p><strong>Looking for Condo</strong></p>
+	                <p>Email: dayle@gmail.com, Phone: 408-555-1212</p>
+	                <p class="ui-li-aside"><strong>7:32</strong>AM</p>
 	            </a></li>
-	            <li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+	            <li data-role="list-divider">Wednesday, June 12, 2013  <span class="ui-li-count">1</span></li>
 	            <li><a href="#error">
-	                <img src="images/news.png">
-	                <h2>Avery Walker</h2>
-	                <p><strong>Re: Dinner Tonight</strong></p>
-	                <p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
-	                <p class="ui-li-aside"><strong>4:48</strong>PM</p>
+	                <img src="images/polar.png">
+	                <h2>Sammy - New Lead</h2>
+	                <p><strong>Looking for Townhome</strong></p>
+	                <p>Email: sammy@gmail.com, Phone: 510-555-1212</p>
+	                <p class="ui-li-aside"><strong>4:08</strong>PM</p>
 	            </a></li>
 	        </ul>  
 	    </div>
@@ -313,8 +349,10 @@
 	-->
 	
 	<!-- Lead Info Page 1 -->
-	<div data-role="page" id="info1" data-add-back-btn="true">
+	<div data-role="page" id="info1">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#name" data-icon="arrow-l">Back</a>
 	        <h1>Lead Info</h1>
 	    </div>
 	    <div data-role="content">
@@ -339,8 +377,10 @@
 	</div>
 	
 	<!-- Lead Info Page 2 -->
-	<div data-role="page" id="info2" data-add-back-btn="true">
+	<div data-role="page" id="info2">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#name" data-icon="arrow-l">Back</a>
 	        <h1>Lead Info</h1>
 	    </div>
 	    <div data-role="content">
@@ -365,8 +405,10 @@
 	</div>
 	
 	<!-- Lead Info Page 3 -->
-	<div data-role="page" id="info3" data-add-back-btn="true">
+	<div data-role="page" id="info3">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#name" data-icon="arrow-l">Back</a>
 	        <h1>Lead Info</h1>
 	    </div>
 	    <div data-role="content">
@@ -389,16 +431,18 @@
 	    	</div><!-- /navbar -->
 	    </div><!-- /footer -->
 	</div>
+		
 	
 	<!-- Error -->
-	<div data-role="page" id="error" data-add-back-btn="true">
+	<div data-role="page" id="error">
 	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><img src="images/pie.png" height="75px" /></div>
+	        <a href="#home" data-icon="arrow-l">Home</a>
+	        
 	        <h1>Error Page</h1>
 	    </div>
 	    <div data-role="content">
-	        <div align="center">
-	            <p>News Feed is Currently Down</p>
-	        </div>
+	        <p>Technical Issue, we are working on it!</p>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
 	    	<div data-role="navbar">
@@ -505,9 +549,10 @@
 	<!-- <script src="js/maingold.js"></script> -->
 	
 	
-	<!-- Chart.js script Used as Animated Chart in Feature Section -->
+	<!-- Chart.js script Used as Animated Chart in Index Head Section -->
 	<script src="js/libs/chart.js"></script>
 	<script src="js/charting.js"></script>
+	
 	
 		
 </body>
