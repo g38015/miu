@@ -503,13 +503,13 @@
 	            	
 	            	<div data-role="fieldcontain">
 	            	    <label for="date">Date:</label>
-	            	    <input type="date" id="date" name="date" />
+	            	    <input type="date" id="date" name="date" value=""/>
 	            	</div>
 	        	    
 	                <div data-role="fieldcontain" id="property">
 	                    <fieldset data-role="controlgroup"> 
 	                        <legend>Property Type</legend>    
-	            	            <input type="checkbox" value="Sfr" id="sfr" name="type" />
+	            	            <input type="checkbox" value="Sfr" id="sfr" name="type" checked=""  />
 	            	            <label for="sfr">Single Family</label>
 	            	            <input type="checkbox" value="Townhome" id="townhome" name="type" />
 	            	            <label for="townhome">Townhome</label>
@@ -520,7 +520,7 @@
 	                         
 	                <div data-role="fieldcontain" id="priceRange">
 	                    <label for="price">Price Range:</label>
-	                    <input type="range" id="price" name="price" value="50000" min="50000" max="500000" step="10000" onchange="slideNumber(this.value)" /><span id="slidevalue">0</span>
+	                    <input type="range" id="price" name="price" value="250000" min="50000" max="500000" step="10000" data-hightlight="true" data-theme="" />
 	                </div>
 	                   
 	                <div data-role="fieldcontain">    
