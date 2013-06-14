@@ -3,12 +3,12 @@ var storeData = function(data) {
     console.log(data);
 
 };
-
+/*
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 	
 });	
-
+*/
 
 		
 $('#additem').on('pageinit', function(){
