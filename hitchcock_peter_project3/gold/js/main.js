@@ -1,16 +1,28 @@
+var storeData = function(data) {
+    // uses form data
+    console.log(data);
+
+};
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
-	var rbform = $('#contactForm');
 	
-	rbform.validate();
 });	
 
-		
-$('#addItem').on('pageinit', function(){
 
-		var myForm = $('#contactForm');
+		
+$('#additem').on('pageinit', function(){
+
+		var myForm = $('#contactForm'),
+		    errorlink = $('#errorslink')
+		
+		;
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
+			    errorlink.click();
+			    for (var key in validator.submitted) {
+			        
+			    }
 			},
 			submitHandler: function() {
 		var data = myForm.serializeArray();
