@@ -36,7 +36,7 @@ if(!key) {
     
 }else{
     // set the id to the existing key we are editing
-        id = key;
+        id             = key;
     }
     // Get all form field values and store in object
     // Object properties contain array form label and input value
@@ -48,9 +48,9 @@ if(!key) {
         lead.date      = ["Date:", xyz("date").value];
         //lead.type      = ["Checked:", typeValue];
         lead.price     = ["Price:", xyz("price").value];
-        //lead.bedrooms  = ["Bedrooms:", xyz("bedrooms").value];
+        lead.bedrooms  = ["Bedrooms:", xyz("bedrooms").value];
         lead.info      = ["Info:", xyz("additional").value];
-        //lead.hidden    = ["Hidden:", xyz("hideme").value];
+        lead.hidden    = ["Hidden:", xyz("hideme").value];
         
         
     // Save data to local storage Use stringify to convert object to a string
@@ -69,7 +69,6 @@ var clearLocal = function(){
         window.location.reload();
         return false;
     }
-
 };
 
 var autofillData = function (){
@@ -115,12 +114,32 @@ var getData = function(){
                 //createLeadLinks(localStorage.key(i), linkLi);
             } 
         }   
-    
-}; 
-
-var	deleteItem = function (){
-			
+        
 };
+
+// Function creates a select Field Element and Populates with Options
+var makeBedrooms = function() {
+    var formTag = document.getElementsByTagName("form"), // Target Form Tag
+        createSelectLi = xyz("bed"), // Finds Element Called bed, targets in HTML
+        createSelect = document.createElement("select"); // Creates Select Element
+        createSelect.setAttribute("id", "bedrooms"); // Sets Attribute id="bedrooms"
+    for(var i=0, j=numberOfBedrooms.length; i<j; i++){ // Populates Select Tage with Array numberOfBedrooms
+        var createOption = document.createElement("option"); // Creates Option Element
+        var optionText = numberOfBedrooms[i]; // Creates Option Text, Grabs Value in Array
+        createOption.setAttribute("value", optionText); // Sets Attribute value="optionText" (values in the array)
+        createOption.innerHTML = optionText; // Sets the Text from Array in the Option Tag
+        createSelect.appendChild(createOption); // Attaches Option Tags to Select Tag
+    } // Loops through the array and sets all option tags
+    createSelectLi.appendChild(createSelect); // Attaches Select Tag and Option Tags to Document
+ }; // Need to Call Function  
+
+
+// Var Defaults
+var numberOfBedrooms = ["Please Select One","1+", "2+", "3+"],
+    typeValue
+    ;
+    makeBedrooms();
+
 
 var display = xyz("displayLink");
 display.addEventListener("click", getData);

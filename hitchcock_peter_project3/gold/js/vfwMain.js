@@ -91,7 +91,7 @@ window.addEventListener("DOMContentLoaded", function() {
          alert("Lead Has Been Saved!");
                       
      }
-     
+     /*
      // This function gets the leads from localstorage and shows them
      function getLeads() {
          if (localStorage.length === 0) {
@@ -128,6 +128,7 @@ window.addEventListener("DOMContentLoaded", function() {
                  } 
              }   
      }
+     */
      /*
      // Search Function
      var searchButton = xyz('searchButton');
@@ -176,7 +177,7 @@ window.addEventListener("DOMContentLoaded", function() {
          imageItem.appendChild(grabPng);
      
      }
-     
+     /*
      // Autofill Local Storage with JSON
      function autofillLeads() {
          // JSON Object is comming from JSON.js file from HTML Page
@@ -188,7 +189,7 @@ window.addEventListener("DOMContentLoaded", function() {
          }
      
      }
-     
+     */
      // Create Edit and Delete Links for Each Stored Lead when Displayed
      function createLeadLinks(key, linkLi) {
          // Add Edit
@@ -268,7 +269,7 @@ window.addEventListener("DOMContentLoaded", function() {
          editSubmitButton.key = this.key;
          
      }
-     
+     /*
      // This function clears all localstorage when delete leads is clicked or tapped
      function clearLeads() {
          if (localStorage.length === 0) {
@@ -280,6 +281,7 @@ window.addEventListener("DOMContentLoaded", function() {
              return false;
          }
      }
+     */
      /*
      function validation(arg) {
          // Define Elements we want to check
@@ -330,12 +332,13 @@ window.addEventListener("DOMContentLoaded", function() {
          }
      }
     */
+    /*
     // Var Defaults
     var numberOfBedrooms = ["1+", "2+", "3+"],
         typeValue
         ;
     makeBedrooms();
-    
+    */
     
     // Set Link and Submit Click Events
     var display = xyz("displayLink");
@@ -346,10 +349,11 @@ window.addEventListener("DOMContentLoaded", function() {
     save.addEventListener("click", validation);
 
 });
-
+/*
 // Function for slider to show the value in the range to a user while sliding
 function slideNumber(slider) {
      var slidevalue = document.getElementById("slidevalue");
      slidevalue.innerHTML = "$50000 to " + "$" + slider;
 
 };
+*/
