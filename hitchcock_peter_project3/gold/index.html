@@ -16,6 +16,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -481,10 +482,8 @@
 	        <a href="#" id="clear" data-role="button">Delete Leads</a>
 	        <a href="#" id="displayLink" data-role="button">Show Leads</a>
 	        <a href="#newLead" id="addNew" data-role="button">Add New</a>
-	        <form action="#additem" method="post" id="contactForm" name="leadForm">
-	            
-	                <div id="errors">
-	                </div>
+	        <form action="#" method="post" id="contactForm" name="leadForm">
+	    
 	                
 	                <div data-role="fieldcontain">   
 	            	    <label for="name">Name:</label>
@@ -505,8 +504,8 @@
 	            	</div>
 	            	
 	            	<div data-role="fieldcontain">
-	            	    <label for="date">Date:</label>
-	            	    <input type="date" id="date" name="date" value="" placeholder="ex. 06/17/2013"/>
+	            	    <label for="mydate">Date:</label>
+	            	    <input type="date" id="mydate" name="mydate" value="" placeholder="ex. 06/17/2013" data-role="datebox" data-options='{ "useClearButton": true, "mode": "calbox", "dialogForce": true}' />
 	            	</div>
 	        	    
 	                <div data-role="fieldcontain" id="property">
@@ -543,7 +542,7 @@
 	                </div>
 	                
 	                <div>
-	                    <input type="submit" name="newLead" value="Submit New Lead!" id="submit" data-theme="b" />
+	                    <input type="submit" name="newLead" value="Submit New Lead!" id="submit" data-theme="b" data-ajax="false" />
 	                    <input type="reset" name="" value="Reset" data-theme="a" />     	
 	                </div>
 	                
@@ -568,9 +567,18 @@
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/libs/jquery.validate.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+	<!-- DateBox Script -->
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	
+	<!-- Validation Script -->
+	<script src="js/libs/jquery.validate.min.js"></script>
+	
+	<!-- Main Script -->
+	<script src="js/main.js"></script>
 	<!-- <script src="js/json.js"></script> -->
 	<!-- <script src="js/search.js"></script> -->
 	<!-- <script src="js/maingold.js"></script> -->
