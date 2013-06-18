@@ -31,10 +31,10 @@
 	            <legend>Lead Info</legend>
 	            <ul id="errors"></ul>
 	            <ul>
-            	    <li><label for="name">Name:</label><input type="text" id="name" placeholder="Name" size="30" /></li>
-            	    <li><label for="phone">Phone:</label><input type="tel" id="phone" placeholder="555-1212" size="30" /></li>
-            	    <li><label for="email">Email:</label><input type="email" id="email" placeholder="email@email.com" size="30" /></li>
-            	    <li><label for="date">Date:</label><input type="date" id="date" size="30" /></li>
+            	    <li><label for="name">Name (required):</label><input type="text" id="name" placeholder="Name" size="30" /></li>
+            	    <li><label for="email">Email (required):</label><input type="email" id="email" placeholder="email@email.com" size="30" /></li>
+            	    <li><label for="phone">Phone:</label><input type="tel" id="phone" placeholder="ex 415-555-1212" size="30" /></li>
+            	    <li><label for="date">Date:</label><input type="date" id="date" size="30" placeholder="ex 12/25/2013" /></li>
         	    </ul>
     	    </fieldset>    
     	    <fieldset>
@@ -42,14 +42,14 @@
     	        <ul>
     	            <li>Property Type:
     	                <ul id="property">    
-            	            <li><input type="radio" value="Sfr" id="sfr" name="type" /><label for="sfr">Single Family</label></li>
+            	            <li><input type="radio" value="Sfr" id="sfr" name="type" checked="" /><label for="sfr">Single Family</label></li>
             	            <li><input type="radio" value="Townhome" id="townhome" name="type" /><label for="townhome">Townhome</label></li>
             	            <li><input type="radio" value="Condo" id="condo" name="type" /><label for="condo">Condo</label></li>
     	                </ul> 
     	            </li>
     	            <li>Price Range:
     	                <ul id="priceRange">
-    	                    <li><input type="range" id="price" min="50000" max="500000" step="10000" onchange="slideNumber(this.value)" /><span id="slidevalue">0</span></li>
+    	                    <li><input type="range" id="price" min="50000" value="250000" max="500000" step="10000" onchange="slideNumber(this.value)" /><span id="slidevalue">0</span></li>
     	                </ul>
     	            </li>
     	            <li>Min Bedrooms:
@@ -72,14 +72,16 @@
     	            </li>
     	        </ul>
     	    </fieldset>
-    	    <input type="button" name="newLead" value="New Lead!" id="submit" />
+    	    <input type="button" name="newLead" value="Submit New Lead!" id="submit" />
+    	    <!--
     	    <fieldset>
     	        <legend>Search</legend>
     	        <ul>
     	    	    <li><label for="search">Search:</label><input type="text" id="search" placeholder="Search" size="30" /></li>
     	        </ul>
     	    </fieldset>
-    	    <input type="button" name="searchButton" value="Search" id="searchButton" />     
+    	    <input type="button" name="searchButton" value="Search" id="searchButton" />
+    	    -->     
 	    </form>
 	    <div id="results"></div>
 	    </div>

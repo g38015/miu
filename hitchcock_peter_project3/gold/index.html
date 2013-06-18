@@ -488,32 +488,35 @@
 	                
 	                <div data-role="fieldcontain">   
 	            	    <label for="name">Name:</label>
-	            	    <input type="text" id="name" name="name" placeholder="Name" class="required" />
-	            	</div>
-	            	
-	            	<div data-role="fieldcontain">
-	            	    <label for="phone">Phone:</label>
-	            	    <input type="tel" id="phone" name="phone" placeholder="555-1212" />
+	            	    <input type="text" id="name" name="name" placeholder="Name" class="required" data-clear-btn="true" />
+	            	    <p>* Name is required</p>
 	            	</div>
 	            	
 	            	<div data-role="fieldcontain">    
 	            	    <label for="email">Email:</label>
-	            	    <input type="email" id="email" name="email" placeholder="email@email.com" class="required email" />
+	            	    <input type="email" id="email" name="email" placeholder="ex. peter@gmail.com" class="required email" data-clear-btn="true" />
+	            	    <p>* Email is Required</p>
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">
+	            	    <label for="phone">Phone:</label>
+	            	    <input type="tel" id="phone" name="phone" placeholder="ex. 415-555-1212" data-clear-btn="true" />
+	            	    <p>Example 415-555-1212</p>
 	            	</div>
 	            	
 	            	<div data-role="fieldcontain">
 	            	    <label for="date">Date:</label>
-	            	    <input type="date" id="date" name="date" value=""/>
+	            	    <input type="date" id="date" name="date" value="" placeholder="ex. 06/17/2013"/>
 	            	</div>
 	        	    
 	                <div data-role="fieldcontain" id="property">
 	                    <fieldset data-role="controlgroup"> 
 	                        <legend>Property Type</legend>    
-	            	            <input type="checkbox" value="Sfr" id="sfr" name="type" checked=""  />
+	            	            <input type="radio" value="Sfr" id="sfr" name="type" checked=""  />
 	            	            <label for="sfr">Single Family</label>
-	            	            <input type="checkbox" value="Townhome" id="townhome" name="type" />
+	            	            <input type="radio" value="Townhome" id="townhome" name="type" />
 	            	            <label for="townhome">Townhome</label>
-	            	            <input type="checkbox" value="Condo" id="condo" name="type" />
+	            	            <input type="radio" value="Condo" id="condo" name="type" />
 	            	            <label for="condo">Condo</label>
 	            	    </fieldset>
 	            	</div>
@@ -532,16 +535,16 @@
 	                
 	                <div id="textArea">
 	                    <label for="additional">Comments:</label>
-	                    <textarea id="additional" name="additional" placeholder="Additional Info"></textarea>
+	                    <textarea id="additional" name="additional" placeholder="Any Comments or Additional Info" data-clear-btn="true"></textarea>
 	                </div>
 	                
 	                <div id="hideme">
 	                    <input type="hidden" id="hide" />
 	                </div>
 	                
-	                <div data-role="fieldcontain">
-	                    <input type="reset" name="" value="Reset" data-theme="a" />     
-	                    <input type="submit" name="newLead" value="New Lead!" id="submit" data-theme="b" />	
+	                <div>
+	                    <input type="submit" name="newLead" value="Submit New Lead!" id="submit" data-theme="b" />
+	                    <input type="reset" name="" value="Reset" data-theme="a" />     	
 	                </div>
 	                
 	                <a href="#errors" id="errorslink" data-rel="dialog">Errors</a>       
@@ -565,9 +568,9 @@
 
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	<script src="js/main.js"></script>
 	<script src="js/libs/jquery.validate.min.js"></script>
-    <script src="js/main.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 	<!-- <script src="js/json.js"></script> -->
 	<!-- <script src="js/search.js"></script> -->
 	<!-- <script src="js/maingold.js"></script> -->
