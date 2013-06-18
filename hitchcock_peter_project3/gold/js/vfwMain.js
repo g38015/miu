@@ -39,6 +39,7 @@ window.addEventListener("DOMContentLoaded", function() {
       }
      
      // Function toggles form, hides form once show leads is tapped or clicked.
+     /*
      function toggleLeads(n) {
          switch(n) {
              case "on":
@@ -58,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function() {
                  return false;
          }
      }
-     
+     */
      // This function stores leads into local storage
      function storeLeads(key) {
      // if there is no key means brand new lead and need a new key
@@ -97,7 +98,7 @@ window.addEventListener("DOMContentLoaded", function() {
              alert("You Have No Leads, Defalt Lead Info Added");
              autofillLeads();
              } else {
-                toggleLeads("on");
+                //toggleLeads("on");
                  //Write local data from local storage to browser
                  var createDiv = document.createElement("div");
                  createDiv.setAttribute("id", "leads");
@@ -127,7 +128,7 @@ window.addEventListener("DOMContentLoaded", function() {
                  } 
              }   
      }
-     
+     /*
      // Search Function
      var searchButton = xyz('searchButton');
      
@@ -165,7 +166,7 @@ window.addEventListener("DOMContentLoaded", function() {
      
      }
      searchButton.addEventListener("click", leadSearch);
-               
+      */         
      // Grab the image
      function loadImage(bedNumber, newsubLi) {
          var imageItem = document.createElement("li");
@@ -279,7 +280,7 @@ window.addEventListener("DOMContentLoaded", function() {
              return false;
          }
      }
-     
+     /*
      function validation(arg) {
          // Define Elements we want to check
          var validateName = xyz('name');
@@ -328,7 +329,7 @@ window.addEventListener("DOMContentLoaded", function() {
              storeLeads(this.key);
          }
      }
-    
+    */
     // Var Defaults
     var numberOfBedrooms = ["1+", "2+", "3+"],
         typeValue

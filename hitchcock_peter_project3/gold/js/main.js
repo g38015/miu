@@ -60,25 +60,77 @@ if(!key) {
 	
 }; 
 
-var saveData = xyz("submit");
-saveData.addEventListener("click");
+var clearLocal = function(){
+    if (localStorage.length === 0) {
+        alert("There Are No Leads to Delete");
+    } else {
+        localStorage.clear();
+        alert("All Leads Have Been Deleted!");
+        window.location.reload();
+        return false;
+    }
 
+};
 
 var autofillData = function (){
-	 
+    // JSON Object is comming from JSON.js file from HTML Page
+    // Store data into local storage
+    for(var n in json) {
+        var id = Math.floor(Math.random()*10000001);
+        localStorage.setItem(id, JSON.stringify(json[n]));
+	 }
 };
 
 var getData = function(){
-
+    if (localStorage.length === 0) {
+        alert("You Have No Leads, Defalt Lead Info Added");
+        autofillData();
+        } else {
+           //toggleLeads("on");
+            //Write local data from local storage to browser
+            var createDiv = document.createElement("div");
+            createDiv.setAttribute("id", "leads");
+            var newList = document.createElement("ul");
+            createDiv.appendChild(newList);
+            document.body.appendChild(createDiv);
+            xyz("leads").style.display = "block";
+            for (var i = 0, len=localStorage.length; i<len; i++) {
+                var newLi = document.createElement("li");
+                var linkLi = document.createElement("li");
+                newList.appendChild(newLi);
+                var key = localStorage.key(i);
+                var value = localStorage.getItem(key);
+                // Convert sting from local storage back to an object by using JSON.parse()
+                var obj = JSON.parse(value);
+                var newsubLi = document.createElement("ul");
+                newLi.appendChild(newsubLi);
+                //loadImage(obj.bedrooms[1], newsubLi);
+                for (var n in obj) {
+                    var makeNewSubli =document.createElement("li");
+                    newsubLi.appendChild(makeNewSubli);
+                    var optSubText = obj[n][0]+" "+obj[n][1];
+                    makeNewSubli.innerHTML = optSubText;
+                    newsubLi.appendChild(linkLi);                         
+                }
+                //createLeadLinks(localStorage.key(i), linkLi);
+            } 
+        }   
+    
 }; 
 
 var	deleteItem = function (){
 			
 };
-					
-var clearLocal = function(){
 
-};
+var display = xyz("displayLink");
+display.addEventListener("click", getData);
+					
+var clear = xyz("clear");
+clear.addEventListener("click", clearLocal);
+
+var saveData = xyz("submit");
+saveData.addEventListener("click");
+
 
 
 
