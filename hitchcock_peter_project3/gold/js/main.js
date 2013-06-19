@@ -1,16 +1,33 @@
+
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
 		
 $('#additem').on('pageinit', function(){
-
-		var myForm = $('#contactForm');
-		    myForm.validate({
+        
+		var myForm = $('#contactForm'),
+		    errorLink = $('#errorslink')
+		
+		;
+		
+		myForm.validate({
 			invalidHandler: function(form, validator) {
+			    errorLink.click();
+			    var html = '';
+			    for(var key in validator.submitted){
+			        var label = $('label[for^="'+ key + '"]').not('[generated]');
+			        console.log(label.text());
+			        var labelName = label.length ? label.text() : label.text();
+			        html += '<li>' + 'A valid ' + labelName +'</li>'
+			    };
+			    $("#errors ul").html(html);
+			
 		},
-			submitHandler: function() {
-		var data = myForm.serializeArray();
-			storeData(this.key);
+		
+		submitHandler: function() {
+		    var data = myForm.serializeArray();
+			storeData(data);
 			console.log(data);
 		}
 	});
@@ -27,7 +44,7 @@ function xyz(x) {
     return getElement;
 };
 
-var storeData = function(key){
+var storeData = function(data, key){
 
 // if there is no key means brand new lead and need a new key
 if(!key) {
@@ -56,7 +73,6 @@ if(!key) {
     // Save data to local storage Use stringify to convert object to a string
     localStorage.setItem(id, JSON.stringify(lead));
     alert("Lead Has Been Saved!");
-    console.log(lead);
 	
 }; 
 
@@ -89,7 +105,7 @@ var getData = function(){
             //Write local data from local storage to browser
             var createDiv = document.createElement("div");
             createDiv.setAttribute("id", "leads");
-            var newList = document.createElement("ul");
+            var newList = document.createElement('ul');
             createDiv.appendChild(newList);
             document.body.appendChild(createDiv);
             xyz("leads").style.display = "block";
@@ -101,7 +117,7 @@ var getData = function(){
                 var value = localStorage.getItem(key);
                 // Convert sting from local storage back to an object by using JSON.parse()
                 var obj = JSON.parse(value);
-                var newsubLi = document.createElement("ul");
+                var newsubLi = document.createElement('ul');
                 newLi.appendChild(newsubLi);
                 //loadImage(obj.bedrooms[1], newsubLi);
                 for (var n in obj) {
@@ -147,8 +163,8 @@ display.addEventListener("click", getData);
 var clear = xyz("clear");
 clear.addEventListener("click", clearLocal);
 
-var saveData = xyz("submit");
-saveData.addEventListener("click");
+//var saveData = xyz("submit");
+//saveData.addEventListener("click");
 
 
 

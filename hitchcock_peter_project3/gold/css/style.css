@@ -39,13 +39,38 @@ June 13, 2013
 */
 
 label.error {
+    float: left; 
+    color: red; 
+    padding-top: .5em; 
+    vertical-align: top; 
+    font-weight:bold;
     display: block;
-    margin: 10px 0 0 ;
-    color: red;
+    margin: 10px 0;
 }
 
 #errorslink {
     display: none;
+}
+
+#leads ul {
+	border: 3px solid #456f9a;
+	background: #5e87b0;
+	color: #fff;
+	font-weight: 700;
+	text-shadow: 0 1px 0 #3e6790;
+	list-style: none;
+	border-radius: 5px;
+	padding: .5em 15px;
+	position: relative;
+}
+
+#leads li {
+	padding: .2em;
+}
+
+#errors ul {
+    list-style-type: none;
+    padding: .2em;
 }
 
 

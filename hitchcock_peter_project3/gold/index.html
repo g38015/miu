@@ -458,20 +458,8 @@
 	    </div><!-- /footer -->
 	</div>
 	
-	<!-- Missing Fields Pop Up -->
-	<div data-role="dialog" id="errors">
-	    <div data-role="header" data-position="fixed" data-theme="b">
-	        <h1>Missing Fields</h1>
-	    </div>
-	    <div data-role="content">
-	        <ul>
-	            <li>Test</li>
-	        </ul>
-	    </div>
-	</div>
-	
 
-	<!-- ReFactored CRUD Need to Refactor Javascript $  -->
+	<!-- ReFactored CRUD  -->
 	<div data-role="page" id="additem" data-add-back-btn="true">
 	    <div data-role="header" data-position="fixed" data-theme="b">
 	        <div align="center"><img src="images/pie.png" height="75px" /></div>
@@ -479,36 +467,34 @@
 	        <h1>New Lead</h1>
 	    </div>
 	    <div data-role="content">
-	        
+	        <!--
 	        <a href="#leads" id="displayLink" data-role="button" data-theme="b">Show Leads</a>
 	        <a href="#" id="clear" data-role="button" data-theme="a">Delete Leads</a>
-	        <!--
 	        <a href="#newLead" id="addNew" data-role="button">Add New</a>
 	        -->
-	        <form action="#" method="post" id="contactForm" name="leadForm" data-ajax="false">
+	        <form action="" method="post" id="contactForm" name="leadForm">
 	    
 	                
 	                <div data-role="fieldcontain">   
-	            	    <label for="name">Name:</label>
-	            	    <input type="text" id="name" name="name" placeholder="Name" class="required" data-clear-btn="true" />
-	            	    <p>* Name is required</p>
+	            	    <label for="name">Name</label>
+	            	    <input type="text" id="name" name="name" placeholder="A Name is Required " class="required" data-clear-btn="true" />
 	            	</div>
 	            	
 	            	<div data-role="fieldcontain">    
-	            	    <label for="email">Email:</label>
-	            	    <input type="email" id="email" name="email" placeholder="ex. peter@gmail.com" class="required email" data-clear-btn="true" />
-	            	    <p>* Email is Required</p>
+	            	    <label for="email">Email</label>
+	            	    <input type="email" id="email" name="email" placeholder="A Valid Email is Required" class="required email" data-clear-btn="true" />
 	            	</div>
 	            	
 	            	<div data-role="fieldcontain">
-	            	    <label for="phone">Phone:</label>
-	            	    <input type="tel" id="phone" name="phone" placeholder="ex. 415-555-1212" data-clear-btn="true" />
+	            	    <label for="phone">Phone</label>
+	            	    <input type="tel" id="phone" name="phone" placeholder="415-555-1212" data-clear-btn="true" />
 	            	    <p>Example 415-555-1212</p>
 	            	</div>
 	            	
 	            	<div data-role="fieldcontain">
-	            	    <label for="mydate">Date:</label>
-	            	    <input type="date" id="mydate" name="mydate" value="" placeholder="ex. 06/17/2013" data-role="datebox" data-options='{ "useClearButton": true, "mode": "calbox", "dialogForce": true}' />
+	            	    <label for="mydate">Date</label>
+	            	    <input type="date" id="mydate" name="mydate" value="" placeholder="06/20/2013" data-role="datebox" data-options='{ "useClearButton": true, "mode": "calbox", "dialogForce": true}' />
+	            	    <p>Tap the Button to Enter Date</p>
 	            	</div>
 	        	    
 	                <div data-role="fieldcontain" id="property">
@@ -524,19 +510,19 @@
 	            	</div>
 	                         
 	                <div data-role="fieldcontain" id="priceRange">
-	                    <label for="price">Price Range:</label>
+	                    <label for="price">Price Range</label>
 	                    <input type="range" id="price" name="price" value="250000" min="50000" max="500000" step="10000" data-hightlight="true" data-theme="" />
 	                </div>
 	                   
 	                <div data-role="fieldcontain">    
-	                    <label for="">Min Bedrooms:</label>
+	                    <label for="">Min Bedrooms</label>
 	                    <ul id="numBed">
 	                        <li id="bed"></li>
 	                    </ul>
 	                </div>
 	                
 	                <div id="textArea">
-	                    <label for="additional">Comments:</label>
+	                    <label for="additional">Comments</label>
 	                    <textarea id="additional" name="additional" placeholder="Any Comments or Additional Info" data-clear-btn="true"></textarea>
 	                </div>
 	                
@@ -561,31 +547,42 @@
 	    		<ul>
 	    			<li><a href="#home">Home</a></li>
 	    			<li><a href="#info">Info</a></li>
-	    			<li><a href="#news">News</a></li>
-	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    			<li><a href="#leads" id="displayLink">Show</a></li>
+	    			<li><a href="" id="clear">Delete</a></li>
 	    		</ul>
 	    	</div>
 	    </div>
 	</div>
-
-	<!-- JavaScript under here -->
+	
+	<!-- Missing Fields Pop Up -->
+	<div data-role="dialog" id="errors">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Missing Fields</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>The following fields need to be completed</p>
+	        <ul>
+	            <li></li>
+	        </ul>
+	    </div>
+	</div>
+	
+		<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+	<!-- Validation Script -->
+	<script src="js/libs/jquery.validate.min.js"></script>
 	
 	<!-- DateBox Script -->
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
 	
-	<!-- Validation Script -->
-	<script src="js/libs/jquery.validate.min.js"></script>
 	
 	<!-- Main Script -->
-	<script src="js/main.js"></script>
 	<script src="js/json.js"></script>
-	<!-- <script src="js/search.js"></script> -->
-	<!-- <script src="js/maingold.js"></script> -->
-	 
+	<script src="js/main.js"></script>
 	
 	<!-- Chart.js script Used as Animated Chart in Index Head Section -->
 	<script src="js/libs/chart.js"></script>
