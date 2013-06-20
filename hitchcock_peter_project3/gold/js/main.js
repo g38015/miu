@@ -17,7 +17,6 @@ $('#additem').on('pageinit', function(){
 			    var html = '';
 			    for(var key in validator.submitted){
 			        var label = $('label[for^="'+ key + '"]').not('[generated]');
-			        console.log(label.text());
 			        var labelName = label.length ? label.text() : label.text();
 			        html += '<li>' + 'A valid ' + labelName +'</li>'
 			    };
@@ -62,7 +61,7 @@ if(!key) {
         lead.name      = ["Name:", xyz("name").value];
         lead.phone     = ["Phone:", xyz("phone").value];
         lead.email     = ["Email:", xyz("email").value];
-        lead.date      = ["Date:", xyz("date").value];
+        lead.date      = ["Date:", xyz("mydate").value];
         //lead.type      = ["Checked:", typeValue];
         lead.price     = ["Price:", xyz("price").value];
         lead.bedrooms  = ["Bedrooms:", xyz("bedrooms").value];
@@ -163,8 +162,8 @@ display.addEventListener("click", getData);
 var clear = xyz("clear");
 clear.addEventListener("click", clearLocal);
 
-//var saveData = xyz("submit");
-//saveData.addEventListener("click");
+var saveData = xyz("submit");
+saveData.addEventListener("click");
 
 
 

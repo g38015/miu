@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", function() {
         var getElement = document.getElementById(x);
         return getElement;
     }
-    
+    /*
     // Function creates a select Field Element and Populates with Options
     function makeBedrooms() {
         var formTag = document.getElementsByTagName("form"), // Target Form Tag
@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", function() {
         } // Loops through the array and sets all option tags
         createSelectLi.appendChild(createSelect); // Attaches Select Tag and Option Tags to Document
      } // Need to Call Function 
-
+    */
      
      // Find value of selected checkbox (this function has issue of retuning all values it loops through only returns one value
      function getSelectedRadio() {
