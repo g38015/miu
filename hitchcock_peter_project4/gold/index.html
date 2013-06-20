@@ -1,0 +1,601 @@
+<!doctype html>  
+<!-- Project 3 GOLD APP Peter Hitchcock MIU 1306 -->
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<title>Real Estate Lead Tracker</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- Disables Automatic Phone Number Linking -->
+	<meta name="format-detection" content="telephone=no" />
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on" />
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+</head>
+<body>
+
+    <!-- Home Page -->
+	<div data-role="page" id="home">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <div align="center"><canvas id="canvas" height="100px"></canvas></div>
+	        <h1>Lead Manager</h1>
+	    </div>
+	    <!-- Feature -->
+	    <div id="feature">
+	        <div align="center">
+	            <h3>Start Closing More Deals!</h3>
+	            <a href="#additem" id="btn" data-role="button" data-inline="true" data-theme="b" data-ajax="false" >Add a New Lead</a>
+	        </div>
+	    </div>
+	    <!-- Browse and Search -->
+	    <div data-role="content">
+	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
+	            <li data-role="list-divider" data-theme="b">Browse by Lead Info</li>
+	            <li><a href="#name">Name</a></li>
+	            <li><a href="#email">Email</a></li>
+	            <li><a href="#date">Date</a></li>
+	            <li data-role="list-divider"  data-theme="b">Browse by Property Info</li>
+	            <li><a href="#type">Property Type</a></li>
+	            <!-- <li><a href="#price">Price Range</a></li> -->
+	            <li><a href="#bedrooms">Min Number of Bedrooms</a></li>
+	            <li data-role="list-divider"  data-theme="b">Options</li>
+	            <!-- <li data-icon="search"><a href="#search">Advanced Search</a></li> -->
+	            <li><a href="#additem">CRUD Refactored</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- 2nd Page -->
+	<div data-role="page" id="name">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <h1>Leads by Name</h1>
+	    </div>
+	    <div data-role="content">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Name">
+	            <li data-role="list-divider">Name</li>
+	            <li><a href="#info1">Peter</a></li>
+	            <li><a href="#info2">Ellie</a></li>
+	            <li><a href="#info3">Ruby</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- 3rd Page -->
+	<div data-role="page" id="email">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <h1>Leads by Email</h1>
+	    </div>
+	    <div data-role="content">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Email">
+	            <li data-role="list-divider">Email</li>
+	            <li><a href="#info1">peter@gmail.com</a></li>
+	            <li><a href="#info2">ellie@gmail.com</a></li>
+	            <li><a href="#info3">ruby@gmail.com</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- 4th Page -->
+	<div data-role="page" id="date">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <h1>Leads by Date</h1>
+	    </div>
+	    <div data-role="content">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Date">
+	            <li data-role="list-divider">Date</li>
+	            <li><a href="#info1">Monday, June 10, 2013</a></li>
+	            <li><a href="#info2">Wednesday, June 12, 2013</a></li>
+	            <li><a href="#info3">Friday, June 14, 2013</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- 5th Page -->
+	<div data-role="page" id="type">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <h1>Leads by Type</h1>
+	    </div>
+	    <div data-role="content">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Property Type">
+	            <li data-role="list-divider">Type</li>
+	            <li><a href="#info1">Single Family Residence</a></li>
+	            <li><a href="#info2">Townhome</a></li>
+	            <li><a href="#info3">Condo</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+		
+	<!-- 6th Page -->
+	<!-- <div data-role="page" id="price" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Leads by Price</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>No Results, Please Enter a New Lead with a Price Range.</p>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div> -->
+	
+	<!-- 7th Page -->
+	<div data-role="page" id="bedrooms">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <h1>Min Bedrooms</h1>
+	    </div>
+	    <div data-role="content">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="b" data-filter="true" data-filter-placeholder="Search by Bedrooms">
+	            <li data-role="list-divider">Bedroom Count</li>
+	            <li><a href="#info1">1+ Bedrooms</a></li>
+	            <li><a href="#info2">2+ Bedrooms</a></li>
+	            <li><a href="#info3">3+ Bedrooms</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- Info Page -->
+	<div data-role="page" id="info">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <h1>Info</h1>
+	    </div>
+	    <!-- Browse and Search -->
+	    <div data-role="content">
+	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
+	            <li data-role="list-divider" data-theme="b">Info</li>
+	            <li data-icon="home"><a href="#home">Home</a></li>
+	            <li><a href="#about">About</a></li>
+	            <li data-icon=""><a href="#news">Lead Feed</a></li>
+	            <li data-role="list-divider"  data-theme="b">Git</li>
+	            <li data-icon="star"><a href="http://g38015.github.io/miu/hitchcock_peter_project3/gold/" data-ajax="false">Gold Live</a></li>
+	            <li data-icon="forward"><a href="http://g38015.github.io/miu/hitchcock_peter_project3/bronze/" data-ajax="false">Bronze Live</a></li>
+	            <li data-icon="star"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project3/gold" data-ajax="false">Gold Code</a></li>
+	            <li data-icon="forward"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project3/bronze" data-ajax="false">Bronze Code</a></li>
+	            <li data-role="list-divider"  data-theme="b">Credits</li>
+	            <li data-icon="check"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
+	        </ul>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info" class="ui-btn-active ui-state-persist">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- About Page -->
+	<div data-role="page" id="about">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#info" data-icon="arrow-l">Back</a>
+	        <h1>About</h1>
+	    </div>
+	    <div data-role="content">
+	        <h3>About Lead Manager</h3>
+	        <p>The Lead Manager App was created for Real Estate Agents on the go. Keeping track of your leads is critical in today's competitive market.  Understanding what your customer is looking for at any given time is now possible with the Lead Manager App!</p>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	
+	<!-- News Page -->
+	<div data-role="page" id="news" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <h1>Lead Stream</h1>
+	    </div>
+	    <div data-role="content">
+	    <!-- NEWS STREAM SAMPLE -->
+	        <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+	            <li data-role="list-divider">Thursday, June 13, 2013 <span class="ui-li-count">2</span></li>
+	            <li><a href="#error">
+	                <img src="images/pie.png">
+	                <h2>Lauren - New Lead</h2>
+	                <p><strong>Looking for Single Family Home</strong></p>
+	                <p>Email: lauren@gmail.com, Phone: 415-555-1212</p>
+	                <p class="ui-li-aside"><strong>9:27</strong>AM</p>
+	            </a></li>
+	            <li><a href="#error">
+	                <img src="images/news.png">
+	                <h2>Dayle - New Lead</h2>
+	                <p><strong>Looking for Condo</strong></p>
+	                <p>Email: dayle@gmail.com, Phone: 408-555-1212</p>
+	                <p class="ui-li-aside"><strong>7:32</strong>AM</p>
+	            </a></li>
+	            <li data-role="list-divider">Wednesday, June 12, 2013  <span class="ui-li-count">1</span></li>
+	            <li><a href="#error">
+	                <img src="images/polar.png">
+	                <h2>Sammy - New Lead</h2>
+	                <p><strong>Looking for Townhome</strong></p>
+	                <p>Email: sammy@gmail.com, Phone: 510-555-1212</p>
+	                <p class="ui-li-aside"><strong>4:08</strong>PM</p>
+	            </a></li>
+	        </ul>  
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news" class="ui-btn-active ui-state-persist">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- Advanced Search Page -->
+	<!--
+	<div data-role="page" id="search" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Advanced Search</h1>
+	    </div>
+	    <div data-role="content">
+	        <div id="update"></div>   
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div>
+	    </div>	</div>
+	</div>
+	-->
+	
+	<!-- Lead Info Page 1 -->
+	<div data-role="page" id="info1">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#name" data-icon="arrow-l">Back</a>
+	        <h1>Lead Info</h1>
+	    </div>
+	    <div data-role="content">
+	        <div align="center">
+	            <h3>Name: Peter</h3>
+	            <p>Email: peter@gmail.com</p>
+	            <p>Date: June 11, 2013</p>
+	            <p>Property Type: Single Family Residence</p>
+	            <p>Number of Bedrooms: 1+</p>
+	        </div>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- Lead Info Page 2 -->
+	<div data-role="page" id="info2">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#name" data-icon="arrow-l">Back</a>
+	        <h1>Lead Info</h1>
+	    </div>
+	    <div data-role="content">
+	        <div align="center">
+	            <h3>Name: Ellie</h3>
+	            <p>Email: ellie@gmail.com</p>
+	            <p>Date: June 12, 2013</p>
+	            <p>Property Type: Townhome</p>
+	            <p>Number of Bedrooms: 2+</p>
+	        </div>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+	<!-- Lead Info Page 3 -->
+	<div data-role="page" id="info3">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#name" data-icon="arrow-l">Back</a>
+	        <h1>Lead Info</h1>
+	    </div>
+	    <div data-role="content">
+	        <div align="center">
+	            <h3>Name: Ruby</h3>
+	            <p>Email: ruby@gmail.com</p>
+	            <p>Date: June 14, 2013</p>
+	            <p>Property Type: Condo</p>
+	            <p>Number of Bedrooms: 3+</p>
+	        </div>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+		
+		
+	<!-- Error -->
+	<div data-role="page" id="error">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Home</a>
+	        
+	        <h1>Error Page</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>Technical Issue, we are working on it!</p>
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#news">News</a></li>
+	    			<li><a href="#additem" data-ajax="false">Add Lead</a></li>
+	    		</ul>
+	    	</div><!-- /navbar -->
+	    </div><!-- /footer -->
+	</div>
+	
+
+	<!-- ReFactored CRUD  -->
+	<div data-role="page" id="additem" data-add-back-btn="true">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <h1>New Lead</h1>
+	    </div>
+	    <div data-role="content">
+	        <!--
+	        <a href="#leads" id="displayLink" data-role="button" data-theme="b">Show Leads</a>
+	        <a href="#" id="clear" data-role="button" data-theme="a">Delete Leads</a>
+	        <a href="#newLead" id="addNew" data-role="button">Add New</a>
+	        -->
+	        <form action="" method="post" id="contactForm" name="leadForm">
+	    
+	                
+	                <div data-role="fieldcontain">   
+	            	    <label for="name">Name</label>
+	            	    <input type="text" id="name" name="name" placeholder="*Name is Required " class="required" data-clear-btn="true" />
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">    
+	            	    <label for="email">Email</label>
+	            	    <input type="email" id="email" name="email" placeholder="*Email is Required" class="required email" data-clear-btn="true" />
+	            	    <p>Example peter@gmail.com</p>
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">
+	            	    <label for="phone">Phone</label>
+	            	    <input type="tel" id="phone" name="phone" placeholder="415-555-1212" data-clear-btn="true" />
+	            	    <p>Example 415-555-1212</p>
+	            	</div>
+	            	
+	            	<div data-role="fieldcontain">
+	            	    <label for="mydate">Date</label>
+	            	    <input type="date" id="mydate" name="mydate" value="" placeholder="06/20/2013" data-role="datebox" data-options='{ "useClearButton": true, "mode": "calbox", "dialogForce": true}' />
+	            	    <p>Tap the Button to Enter Date</p>
+	            	</div>
+	        	    
+	                <div data-role="fieldcontain" id="property">
+	                    <fieldset data-role="controlgroup"> 
+	                        <legend>Property Type</legend>    
+	            	            <input type="radio" value="Sfr" id="sfr" name="type" checked=""  />
+	            	            <label for="sfr">Single Family</label>
+	            	            <input type="radio" value="Townhome" id="townhome" name="type" />
+	            	            <label for="townhome">Townhome</label>
+	            	            <input type="radio" value="Condo" id="condo" name="type" />
+	            	            <label for="condo">Condo</label>
+	            	    </fieldset>
+	            	</div>
+	                         
+	                <div data-role="fieldcontain" id="priceRange">
+	                    <label for="price">Price Range</label>
+	                    <input type="range" id="price" name="price" value="250000" min="50000" max="500000" step="10000" data-hightlight="true" data-theme="" />
+	                </div>
+	                   
+	                <div data-role="fieldcontain">    
+	                    <label for="">Min Bedrooms</label>
+	                    <ul id="numBed">
+	                        <li id="bed"></li>
+	                    </ul>
+	                    <p>Please Select a Number</p>
+	                </div>
+	                
+	                <div id="textArea">
+	                    <label for="additional">Comments</label>
+	                    <textarea id="additional" name="additional" placeholder="Any Comments or Additional Info" data-clear-btn="true"></textarea>
+	                </div>
+	                
+	                <div id="hideme">
+	                    <input type="hidden" id="hide" />
+	                </div>
+	                
+	                <div>
+	                    <input type="submit" name="newLead" value="Submit New Lead!" id="submit" data-theme="b" data-ajax="false" />
+	                    <input type="reset" name="" value="Reset" data-theme="a" /> 	
+	                </div>
+	                
+	                <a href="#errors" id="errorslink" data-rel="dialog">Errors</a>
+	                       
+	        </form>
+	        
+	        <div id="results">
+	        </div>
+	        
+	    </div>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    	<div data-role="navbar">
+	    		<ul>
+	    			<li><a href="#home">Home</a></li>
+	    			<li><a href="#info">Info</a></li>
+	    			<li><a href="#leads" id="displayLink">Show</a></li>
+	    			<li><a href="" id="clear">Delete</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	</div>
+	
+	<!-- Missing Fields Pop Up -->
+	<div data-role="dialog" id="errors">
+	    <div data-role="header" data-position="fixed" data-theme="b">
+	        <h1>Missing Fields</h1>
+	    </div>
+	    <div data-role="content">
+	        <p>The following fields need to be completed</p>
+	        <ul>
+	            <li></li>
+	        </ul>
+	    </div>
+	</div>
+	
+		<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	
+	<!-- Validation Script -->
+	<script src="js/libs/jquery.validate.min.js"></script>
+	
+	
+	<!-- DateBox Script -->
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	
+	
+	<!-- Main Script -->
+	<script src="js/json.js"></script>
+	<script src="js/main.js"></script>
+	
+	
+	<!-- Chart.js script Used as Animated Chart in Index Head Section -->
+	<script src="js/libs/chart.js"></script>
+	<script src="js/charting.js"></script>
+	
+	
+		
+</body>
+</html>
