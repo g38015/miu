@@ -1,5 +1,5 @@
 <!doctype html>  
-<!-- Project 2 GOLD APP Peter Hitchcock MIU 1306 -->
+<!-- Project 3 GOLD APP Peter Hitchcock MIU 1306 -->
 <html lang="en">
 <head>
 
@@ -10,6 +10,9 @@
 	<meta name="HandheldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- Disables Automatic Phone Number Linking -->
+	<meta name="format-detection" content="telephone=no" />
 	
 	<!-- Mobile IE needs ClearType for smoothing fonts -->
 	<meta http-equiv="cleartype" content="on" />
@@ -50,9 +53,8 @@
 	            <!-- <li><a href="#price">Price Range</a></li> -->
 	            <li><a href="#bedrooms">Min Number of Bedrooms</a></li>
 	            <li data-role="list-divider"  data-theme="b">Options</li>
-	            <li data-icon="search"><a href="#search">Advanced Search</a></li>
-	            <li data-icon="search"><a href="#additem">Form Re Factored</a></li>
-
+	            <!-- <li data-icon="search"><a href="#search">Advanced Search</a></li> -->
+	            <li><a href="#additem">CRUD Refactored</a></li>
 	        </ul>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
@@ -237,10 +239,10 @@
 	            <li><a href="#about">About</a></li>
 	            <li data-icon=""><a href="#news">Lead Feed</a></li>
 	            <li data-role="list-divider"  data-theme="b">Git</li>
-	            <li data-icon="star"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false">Gold Live</a></li>
-	            <li data-icon="forward"><a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false">Bronze Live</a></li>
-	            <li data-icon="star"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/gold" data-ajax="false">Gold Code</a></li>
-	            <li data-icon="forward"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false">Bronze Code</a></li>
+	            <li data-icon="star"><a href="http://g38015.github.io/miu/hitchcock_peter_project3/gold/" data-ajax="false">Gold Live</a></li>
+	            <li data-icon="forward"><a href="http://g38015.github.io/miu/hitchcock_peter_project3/bronze/" data-ajax="false">Bronze Live</a></li>
+	            <li data-icon="star"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project3/gold" data-ajax="false">Gold Code</a></li>
+	            <li data-icon="forward"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project3/bronze" data-ajax="false">Bronze Code</a></li>
 	            <li data-role="list-divider"  data-theme="b">Credits</li>
 	            <li data-icon="check"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
 	        </ul>
@@ -434,7 +436,7 @@
 	    </div><!-- /footer -->
 	</div>
 		
-	
+		
 	<!-- Error -->
 	<div data-role="page" id="error">
 	    <div data-role="header" data-position="fixed" data-theme="b">
@@ -520,6 +522,7 @@
 	                    <ul id="numBed">
 	                        <li id="bed"></li>
 	                    </ul>
+	                    <p>Please Select a Number</p>
 	                </div>
 	                
 	                <div id="textArea">
@@ -533,10 +536,11 @@
 	                
 	                <div>
 	                    <input type="submit" name="newLead" value="Submit New Lead!" id="submit" data-theme="b" data-ajax="false" />
-	                    <input type="reset" name="" value="Reset" data-theme="a" />     	
+	                    <input type="reset" name="" value="Reset" data-theme="a" /> 	
 	                </div>
 	                
-	                <a href="#errors" id="errorslink" data-rel="dialog">Errors</a>       
+	                <a href="#errors" id="errorslink" data-rel="dialog">Errors</a>
+	                       
 	        </form>
 	        
 	        <div id="results">

@@ -1,4 +1,6 @@
-
+// Project 3
+// MIU 1306
+// Peter Hitchcock
 
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
@@ -43,6 +45,17 @@ function xyz(x) {
     return getElement;
 };
 
+/*
+function getSelectedRadio() {
+         var radios = document.forms[0].type;
+         for (var i = 0; i < radios.length; i++) {
+             if (radios[i].checked) {
+                 typeValue = radios[i].value;
+             }  
+         }   
+ }
+*/
+
 var storeData = function(data, key){
 
 // if there is no key means brand new lead and need a new key
@@ -56,7 +69,7 @@ if(!key) {
     }
     // Get all form field values and store in object
     // Object properties contain array form label and input value
-    // getSelectedRadio();
+    //getSelectedRadio();
     var lead           = {};
         lead.name      = ["Name:", xyz("name").value];
         lead.phone     = ["Phone:", xyz("phone").value];
@@ -150,7 +163,7 @@ var makeBedrooms = function() {
 
 
 // Var Defaults
-var numberOfBedrooms = ["Please Select One","1+", "2+", "3+"],
+var numberOfBedrooms = ["1+", "2+", "3+"],
     typeValue
     ;
     makeBedrooms();
