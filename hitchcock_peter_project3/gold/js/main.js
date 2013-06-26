@@ -8,74 +8,44 @@ $('#home').on('pageinit', function(){
 		
 $('#additem').on('pageinit', function(){
         
-		var myForm = $('#contactForm');
-		    //errorLink = $('#errorslink')
+		var myForm = $('#contactForm'),
+		    errorLink = $('#errorslink')
 		
+		;
 		
-		/*
 		myForm.validate({
 			invalidHandler: function(form, validator) {
 			    errorLink.click();
 			    var html = '';
-			    for(var key in validator.submitted){ var label = $('label[for^="'+ key +'"]').not('[generated]'); var legend = label.closest('fieldset').find('.ui-controlgroup-label'); var fieldName = legend.length ? legend.text() : label.text(); html += '<li>' + fieldName + '</li>';
+			    for(var key in validator.submitted){
+			        var label = $('label[for^="'+ key + '"]').not('[generated]');
+			        var labelName = label.length ? label.text() : label.text();
+			        html += '<li>' + 'A valid ' + labelName +'</li>'
 			    };
 			    $("#errors ul").html(html);
-			*/
-		
+			
+		},
 		
 		submitHandler: function() {
 		    var data = myForm.serializeArray();
 			storeData(data);
 			console.log(data);
-		};
+		}
 	});
 	
 	//any other code needed for addItem page goes here
-	var storeData = function(data, key){
-	
-	// if there is no key means brand new lead and need a new key
-	if(!key) {
-	
-	    var id             = Math.floor(Math.random()*10000001);
-	    
-	}else{
-	    // set the id to the existing key we are editing
-	        id             = key;
-	    }
-	    // Get all form field values and store in object
-	    // Object properties contain array form label and input value
-	    // getSelectedRadio();
-	    var lead           = {};
-	        lead.name      = ["Name:", $("#name").val()];
-	        lead.phone     = ["Phone:", $("#phone").val()];
-	        lead.email     = ["Email:", $("#email").val()];
-	        lead.date      = ["Date:", $("#mydate").val()];
-	        lead.type      = ["Type:", $("input:radio[name=type]:checked").val()];
-	        lead.price     = ["Price:", $("#price").val()];
-	       // lead.bedrooms  = ["Bedrooms:", $("#bedrooms").value()];
-	        lead.info      = ["Info:", $("#additional").val()];
-	        //lead.hidden    = ["Hidden:", $("#hideme").value()];
-	        
-	        
-	    // Save data to local storage Use stringify to convert object to a string
-	    localStorage.setItem(id, JSON.stringify(lead));
-	    alert("Lead Has Been Saved!");
-		
-	}; 
-	
 	
 });
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
 // getElementsById Function
-/*
 function xyz(x) {
     var getElement = document.getElementById(x);
     return getElement;
 };
-*/
-/*
+
+
 function getSelectedRadio() {
          var radios = document.forms[0].type;
          for (var i = 0; i < radios.length; i++) {
@@ -84,8 +54,8 @@ function getSelectedRadio() {
              }  
          }   
  }
-*/
-/*
+
+
 var storeData = function(data, key){
 
 // if there is no key means brand new lead and need a new key
@@ -99,17 +69,17 @@ if(!key) {
     }
     // Get all form field values and store in object
     // Object properties contain array form label and input value
-    // getSelectedRadio();
+    //getSelectedRadio();
     var lead           = {};
         lead.name      = ["Name:", $("#name").val()];
-        //lead.phone     = ["Phone:", $("#phone").value()];
+        lead.phone     = ["Phone:", $("#phone").val()];
         lead.email     = ["Email:", $("#email").val()];
-       // lead.date      = ["Date:", $("#mydate").value()];
+        lead.date      = ["Date:", $("#mydate").val()];
         lead.type      = ["Type:", $("input:radio[name=type]:checked").val()];
-        //lead.price     = ["Price:", $("#price").value()];
-       // lead.bedrooms  = ["Bedrooms:", $("#bedrooms").value()];
-        //lead.info      = ["Info:", $("#additional").value()];
-        //lead.hidden    = ["Hidden:", $("#hideme").value()];
+        lead.price     = ["Price:", $("#price").val()];
+        lead.bedrooms  = ["Bedrooms:", $("#bedrooms").val()];
+        lead.info      = ["Info:", $("#additional").val()];
+        lead.hidden    = ["Hidden:", $("#hideme").val()];
         
         
     // Save data to local storage Use stringify to convert object to a string
@@ -117,7 +87,7 @@ if(!key) {
     alert("Lead Has Been Saved!");
 	
 }; 
-/*
+
 var clearLocal = function(){
     if (localStorage.length === 0) {
         alert("There Are No Leads to Delete");
@@ -176,8 +146,6 @@ var getData = function(){
 };
 
 // Function creates a select Field Element and Populates with Options
-
-
 var makeBedrooms = function() {
     var formTag = document.getElementsByTagName("form"), // Target Form Tag
         createSelectLi = xyz("bed"), // Finds Element Called bed, targets in HTML
@@ -207,10 +175,10 @@ display.addEventListener("click", getData);
 var clear = xyz("clear");
 clear.addEventListener("click", clearLocal);
 
-//var saveData = xyz("submit");
-//saveData.addEventListener("click");
+var saveData = xyz("submit");
+saveData.addEventListener("click");
 
-*/
+
 
 
 
