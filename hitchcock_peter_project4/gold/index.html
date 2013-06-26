@@ -18,7 +18,8 @@
 	<meta http-equiv="cleartype" content="on" />
 	
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
 	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	
@@ -29,37 +30,37 @@
 <body>
 
     <!-- Home Page -->
-	<div data-role="page" id="home">
-	    <div data-role="header" data-position="fixed" data-theme="b">
+	<div data-role="page" id="home" data-theme="a">
+	    <div data-role="header" data-position="fixed">
 	        <div align="center"><canvas id="canvas" height="100px"></canvas></div>
 	        <h1>Lead Manager</h1>
 	    </div>
 	    <!-- Feature -->
-	    <div id="feature">
-	        <div align="center">
+	    <div id="feature" data-theme="a">
+	        <div align="center"> 
 	            <h3>Start Closing More Deals!</h3>
-	            <a href="#additem" id="btn" data-role="button" data-inline="true" data-theme="b" data-ajax="false" >Add a New Lead</a>
+	            <a href="#additem" id="btn" data-role="button" data-inline="true" data-theme="a" data-ajax="false" >Add a New Lead</a>
 	        </div>
 	    </div>
 	    <!-- Browse and Search -->
-	    <div data-role="content">
-	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
-	            <li data-role="list-divider" data-theme="b">Browse by Lead Info</li>
+	    <div data-role="content" data-theme="a">
+	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="a" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
+	            <li data-role="list-divider" data-theme="c">Browse by Lead Info</li>
 	            <li><a href="#name1">Name</a></li>
 	            <li><a href="#email1">Email</a></li>
 	            <li><a href="#date">Date</a></li>
-	            <li data-role="list-divider"  data-theme="b">Browse by Property Info</li>
+	            <li data-role="list-divider"  data-theme="c">Browse by Property Info</li>
 	            <li><a href="#type">Property Type</a></li>
 	            <!-- <li><a href="#price">Price Range</a></li> -->
 	            <li><a href="#bedrooms">Min Number of Bedrooms</a></li>
-	            <li data-role="list-divider"  data-theme="b">Options</li>
+	            <li data-role="list-divider"  data-theme="c">Options</li>
 	            <!-- <li data-icon="search"><a href="#search">Advanced Search</a></li> -->
 	            <li><a href="#additem">CRUD Refactored</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
-	    	<div data-role="navbar">
-	    		<ul>
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
+	    	<div data-role="navbar" data-theme="">
+	    		<ul data-theme="a">
 	    			<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
 	    			<li><a href="#info">Info</a></li>
 	    			<li><a href="#news">News</a></li>
