@@ -474,19 +474,32 @@
 	        <a href="#" id="clear" data-role="button" data-theme="a">Delete Leads</a>
 	        <a href="#newLead" id="addNew" data-role="button">Add New</a>
 	        -->
-	        <form action="" method="post" id="contactForm" name="leadForm">
+	        <form action="" method="post" id="contactForm">
 	    
-	                
+	                <!--
 	                <div data-role="fieldcontain">   
 	            	    <label for="name">Name</label>
-	            	    <input type="text" id="name" name="name" placeholder="*Name is Required " class="required" data-clear-btn="true" />
+	            	    <textarea name="name" id="name" placeholder="*Name is Required" class="required"></textarea>
 	            	</div>
+	            	
+	            	<div id="textArea">
+	            	    <label for="name">Name</label>
+	            	    <textarea id="name" name="name" placeholder="Name is required" data-clear-btn="true"></textarea>
+	            	</div>
+	            	-->
 	            	
 	            	<div data-role="fieldcontain">    
 	            	    <label for="email">Email</label>
-	            	    <input type="email" id="email" name="email" placeholder="*Email is Required" class="required email" data-clear-btn="true" />
+	            	    <input id="email" placeholder="*Email is Required" type="email" class="required email" data-clear-btn="true" />
 	            	    <p>Example peter@gmail.com</p>
 	            	</div>
+	            	
+	            	
+	            	<div data-role="fieldcontain">   
+	            		<label for="name">Name</label>
+	            		<input id="name" name="name" placeholder="*Name is Required"type="text" required />
+	            	</div>
+	            
 	            	
 	            	<div data-role="fieldcontain">
 	            	    <label for="phone">Phone</label>

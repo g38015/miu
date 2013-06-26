@@ -45,7 +45,7 @@ function xyz(x) {
     return getElement;
 };
 
-/*
+
 function getSelectedRadio() {
          var radios = document.forms[0].type;
          for (var i = 0; i < radios.length; i++) {
@@ -54,7 +54,7 @@ function getSelectedRadio() {
              }  
          }   
  }
-*/
+
 
 var storeData = function(data, key){
 
@@ -71,15 +71,15 @@ if(!key) {
     // Object properties contain array form label and input value
     //getSelectedRadio();
     var lead           = {};
-        lead.name      = ["Name:", xyz("name").value];
-        lead.phone     = ["Phone:", xyz("phone").value];
-        lead.email     = ["Email:", xyz("email").value];
-        lead.date      = ["Date:", xyz("mydate").value];
-        //lead.type      = ["Checked:", typeValue];
-        lead.price     = ["Price:", xyz("price").value];
-        lead.bedrooms  = ["Bedrooms:", xyz("bedrooms").value];
-        lead.info      = ["Info:", xyz("additional").value];
-        lead.hidden    = ["Hidden:", xyz("hideme").value];
+        lead.name      = ["Name:", $("#name").val()];
+        lead.phone     = ["Phone:", $("#phone").val()];
+        lead.email     = ["Email:", $("#email").val()];
+        lead.date      = ["Date:", $("#mydate").val()];
+        lead.type      = ["Type:", $("input:radio[name=type]:checked").val()];
+        lead.price     = ["Price:", $("#price").val()];
+        lead.bedrooms  = ["Bedrooms:", $("#bedrooms").val()];
+        lead.info      = ["Info:", $("#additional").val()];
+        lead.hidden    = ["Hidden:", $("#hideme").val()];
         
         
     // Save data to local storage Use stringify to convert object to a string
