@@ -32,33 +32,33 @@
     <!-- Home Page -->
 	<div data-role="page" id="home" data-theme="a">
 	    <div data-role="header" data-position="fixed">
-	        <div align="center"><canvas id="canvas" height="100px"></canvas></div>
+	        <div align="center"><canvas id="canvas" height="75px"></canvas></div>
 	        <h1>Lead Manager</h1>
 	    </div>
 	    <!-- Feature -->
 	    <div id="feature" data-theme="a">
 	        <div align="center"> 
 	            <h3>Start Closing More Deals!</h3>
-	            <a href="#additem" id="btn" data-role="button" data-inline="true" data-ajax="false" >Add a New Lead</a>
+	            <a href="#additem" id="btn" data-role="button" data-inline="true" data-ajax="false" data-theme="b">Add a New Lead</a>
 	        </div>
 	    </div>
 	    <!-- Browse and Search -->
 	    <div data-role="content" data-theme="a">
 	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="a" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
-	            <li data-role="list-divider" data-theme="c">Browse by Lead Info</li>
+	            <li data-role="list-divider" data-theme="a">Browse by Lead Info</li>
 	            <li><a href="#name1">Name</a></li>
 	            <li><a href="#email1">Email</a></li>
 	            <li><a href="#date">Date</a></li>
-	            <li data-role="list-divider"  data-theme="c">Browse by Property Info</li>
+	            <li data-role="list-divider"  data-theme="a">Browse by Property Info</li>
 	            <li><a href="#type">Property Type</a></li>
 	            <!-- <li><a href="#price">Price Range</a></li> -->
 	            <li><a href="#bedrooms">Min Number of Bedrooms</a></li>
-	            <li data-role="list-divider"  data-theme="c">Options</li>
+	            <li data-role="list-divider"  data-theme="a">Options</li>
 	            <!-- <li data-icon="search"><a href="#search">Advanced Search</a></li> -->
 	            <li><a href="#additem">CRUD Refactored</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
 	    	<div data-role="navbar" data-theme="">
 	    		<ul data-theme="a">
 	    			<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
@@ -73,12 +73,11 @@
 	<!-- 2nd Page -->
 	<div data-role="page" id="name1" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="150px" />
 	        <h1>Leads by Name</h1>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-inset="true" data-divider-theme="c" data-filter="true" data-filter-placeholder="Search by Name">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="a" data-filter="true" data-filter-placeholder="Search by Name">
 	            <li data-role="list-divider">Name</li>
 	            <li><a href="#info1">Peter</a></li>
 	            <li><a href="#info2">Ellie</a></li>
@@ -100,19 +99,18 @@
 	<!-- 3rd Page -->
 	<div data-role="page" id="email1" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="150px" />
 	        <h1>Leads by Email</h1>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-inset="true" data-divider-theme="c" data-filter="true" data-filter-placeholder="Search by Email">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="a" data-filter="true" data-filter-placeholder="Search by Email">
 	            <li data-role="list-divider">Email</li>
 	            <li><a href="#info1">peter@gmail.com</a></li>
 	            <li><a href="#info2">ellie@gmail.com</a></li>
 	            <li><a href="#info3">ruby@gmail.com</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
 	    	<div data-role="navbar">
 	    		<ul>
 	    			<li><a href="#home">Home</a></li>
@@ -127,19 +125,18 @@
 	<!-- 4th Page -->
 	<div data-role="page" id="date" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="150px" />
 	        <h1>Leads by Date</h1>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-inset="true" data-divider-theme="c" data-filter="true" data-filter-placeholder="Search by Date">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="a" data-filter="true" data-filter-placeholder="Search by Date">
 	            <li data-role="list-divider">Date</li>
 	            <li><a href="#info1">Monday, June 10, 2013</a></li>
 	            <li><a href="#info2">Wednesday, June 12, 2013</a></li>
 	            <li><a href="#info3">Friday, June 14, 2013</a></li>
 	        </ul>
 	    </div>
-	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
 	    	<div data-role="navbar">
 	    		<ul>
 	    			<li><a href="#home">Home</a></li>
@@ -154,12 +151,11 @@
 	<!-- 5th Page -->
 	<div data-role="page" id="type" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="150px" />
 	        <h1>Leads by Type</h1>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-inset="true" data-divider-theme="c" data-filter="true" data-filter-placeholder="Search by Property Type">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="a" data-filter="true" data-filter-placeholder="Search by Property Type">
 	            <li data-role="list-divider">Type</li>
 	            <li><a href="#info1">Single Family Residence</a></li>
 	            <li><a href="#info2">Townhome</a></li>
@@ -201,12 +197,11 @@
 	<!-- 7th Page -->
 	<div data-role="page" id="bedrooms" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="150px" />
 	        <h1>Min Bedrooms</h1>
 	    </div>
 	    <div data-role="content">
-	        <ul data-role="listview" data-inset="true" data-divider-theme="c" data-filter="true" data-filter-placeholder="Search by Bedrooms">
+	        <ul data-role="listview" data-inset="true" data-divider-theme="a" data-filter="true" data-filter-placeholder="Search by Bedrooms">
 	            <li data-role="list-divider">Bedroom Count</li>
 	            <li><a href="#info1">1+ Bedrooms</a></li>
 	            <li><a href="#info2">2+ Bedrooms</a></li>
@@ -228,23 +223,22 @@
 	<!-- Info Page -->
 	<div data-role="page" id="info" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <img src="images/logo.png" width="125" />
 	        <h1>Info</h1>
 	    </div>
 	    <!-- Browse and Search -->
 	    <div data-role="content">
 	        <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="a" data-filter-placeholder="Search" class="ui-icon-alt" data-inset="true">
-	            <li data-role="list-divider" data-theme="c">Info</li>
+	            <li data-role="list-divider" data-theme="a">Info</li>
 	            <li data-icon="home"><a href="#home">Home</a></li>
 	            <li><a href="#about">About</a></li>
 	            <li data-icon=""><a href="#news">Lead Feed</a></li>
-	            <li data-role="list-divider"  data-theme="c">Git</li>
+	            <li data-role="list-divider"  data-theme="a">Git</li>
 	            <li data-icon="star"><a href="http://g38015.github.io/miu/hitchcock_peter_project4/gold/" data-ajax="false">Gold Live</a></li>
 	            <li data-icon="forward"><a href="http://g38015.github.io/miu/hitchcock_peter_project4/bronze/" data-ajax="false">Bronze Live</a></li>
 	            <li data-icon="star"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project4/gold" data-ajax="false">Gold Code</a></li>
 	            <li data-icon="forward"><a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project4/bronze" data-ajax="false">Bronze Code</a></li>
-	            <li data-role="list-divider"  data-theme="c">Credits</li>
+	            <li data-role="list-divider"  data-theme="a">Credits</li>
 	            <li data-icon="check"><a href="http://www.chartjs.org/" data-ajax="false">Chart.js</a></li>
 	        </ul>
 	    </div>
@@ -263,7 +257,7 @@
 	<!-- About Page -->
 	<div data-role="page" id="about" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
+	        <img src="images/logo.png" width="150px" />
 	        <a href="#info" data-icon="arrow-l">Back</a>
 	        <h1>About</h1>
 	    </div>
@@ -287,14 +281,13 @@
 	<!-- News Page -->
 	<div data-role="page" id="news" data-add-back-btn="true" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <img src="images/logo.png" width="125" />
 	        <h1>Lead Stream</h1>
 	    </div>
 	    <div data-role="content">
 	    <!-- NEWS STREAM SAMPLE -->
 	        <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
-	            <li data-role="list-divider" data-theme="c">Thursday, June 13, 2013 <span class="ui-li-count">2</span></li>
+	            <li data-role="list-divider" data-theme="a">Thursday, June 13, 2013 <span class="ui-li-count">2</span></li>
 	            <li><a href="#error">
 	                <img src="images/pie.png">
 	                <h2>Lauren - New Lead</h2>
@@ -309,7 +302,7 @@
 	                <p>Email: dayle@gmail.com, Phone: 408-555-1212</p>
 	                <p class="ui-li-aside"><strong>7:32</strong>AM</p>
 	            </a></li>
-	            <li data-role="list-divider" data-theme="c">Wednesday, June 12, 2013  <span class="ui-li-count">1</span></li>
+	            <li data-role="list-divider" data-theme="a">Wednesday, June 12, 2013  <span class="ui-li-count">1</span></li>
 	            <li><a href="#error">
 	                <img src="images/polar.png">
 	                <h2>Sammy - New Lead</h2>
@@ -356,8 +349,7 @@
 	<!-- Lead Info Page 1 -->
 	<div data-role="page" id="info1" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#name" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="125" />
 	        <h1>Lead Info</h1>
 	    </div>
 	    <div data-role="content">
@@ -367,6 +359,7 @@
 	            <p>Date: June 11, 2013</p>
 	            <p>Property Type: Single Family Residence</p>
 	            <p>Number of Bedrooms: 1+</p>
+	            <a href="#home" id="btn" data-role="button" data-inline="true" data-theme="b">Back to Leads</a>
 	        </div>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
@@ -384,8 +377,7 @@
 	<!-- Lead Info Page 2 -->
 	<div data-role="page" id="info2" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#name" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="125" />
 	        <h1>Lead Info</h1>
 	    </div>
 	    <div data-role="content">
@@ -395,6 +387,7 @@
 	            <p>Date: June 12, 2013</p>
 	            <p>Property Type: Townhome</p>
 	            <p>Number of Bedrooms: 2+</p>
+	            <a href="#home" id="btn" data-role="button" data-inline="true" data-theme="b">Back to Leads</a>
 	        </div>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
@@ -412,8 +405,7 @@
 	<!-- Lead Info Page 3 -->
 	<div data-role="page" id="info3" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#name" data-icon="arrow-l">Back</a>
+	        <img src="images/logo.png" width="125" />
 	        <h1>Lead Info</h1>
 	    </div>
 	    <div data-role="content">
@@ -423,6 +415,7 @@
 	            <p>Date: June 14, 2013</p>
 	            <p>Property Type: Condo</p>
 	            <p>Number of Bedrooms: 3+</p>
+	            <a href="#home" id="btn" data-role="button" data-inline="true" data-theme="b">Back to Leads</a>
 	        </div>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
@@ -441,13 +434,12 @@
 	<!-- Error -->
 	<div data-role="page" id="error" data-theme="a">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Home</a>
-	        
+	        <img src="images/logo.png" width="150px" />
 	        <h1>Error Page</h1>
 	    </div>
-	    <div data-role="content">
+	    <div data-role="content" align="center">
 	        <p>Technical Issue, we are working on it!</p>
+	        <a href="#home" id="btn" data-role="button" data-inline="true" data-theme="b">Back to Lead Stream</a>
 	    </div>
 	    <div data-role="footer" data-id="footer" data-position="fixed" data-theme="a">
 	    	<div data-role="navbar">
@@ -463,10 +455,9 @@
 	
 
 	<!-- ReFactored CRUD  -->
-	<div data-role="page" id="additem" data-add-back-btn="true" data-theme="a">
+	<div data-role="page" id="additem" data-add-back-btn="true" data-theme="c">
 	    <div data-role="header" data-position="fixed" data-theme="a">
-	        <!-- <div align="center"><img src="images/pie.png" height="75px" /></div> -->
-	        <a href="#home" data-icon="arrow-l">Home</a>
+	        <img src="images/logo.png" width="125px" />
 	        <h1>New Lead</h1>
 	    </div>
 	    <div data-role="content">
@@ -502,7 +493,7 @@
 	            	</div>
 	        	    
 	                <div data-role="fieldcontain" id="property">
-	                    <fieldset data-role="controlgroup"> 
+	                    <fieldset data-role="controlgroup" data-theme="a"> 
 	                        <legend>Property Type</legend>    
 	            	            <input type="radio" value="Sfr" id="sfr" name="type" checked=""  />
 	            	            <label for="sfr">Single Family</label>
@@ -537,7 +528,7 @@
 	                 
 	                <div>
 	                    <input type="submit" name="newLead" value="Submit New Lead!" id="submit" data-theme="b" data-ajax="false" />
-	                    <input type="reset" name="" value="Reset" data-theme="d" /> 	
+	                    <input type="reset" name="" value="Reset" data-theme="c" /> 	
 	                </div>
 	                
 	                <a href="#errors" id="errorslink" data-rel="dialog">Errors</a>
