@@ -24,3 +24,9 @@ http://g38015.github.io/miu/hitchcock_peter_project3/bronze
 
 
 Project 4 gh-pages:
+
+Gold:
+http://g38015.github.io/miu/hitchcock_peter_project4/gold
+
+Bronze:
+http://g38015.github.io/miu/hitchcock_peter_project4/bronze
