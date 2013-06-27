@@ -45,7 +45,7 @@ function xyz(x) {
     return getElement;
 };
 
-
+/*
 function getSelectedRadio() {
          var radios = document.forms[0].type;
          for (var i = 0; i < radios.length; i++) {
@@ -55,7 +55,7 @@ function getSelectedRadio() {
          }   
  }
 
-
+*/
 var storeData = function(data, key){
 
 // if there is no key means brand new lead and need a new key
@@ -79,7 +79,7 @@ if(!key) {
         lead.price     = ["Price:", $("#price").val()];
         lead.bedrooms  = ["Bedrooms:", $("#bedrooms").val()];
         lead.info      = ["Info:", $("#additional").val()];
-        lead.hidden    = ["Hidden:", $("#hideme").val()];
+        //lead.hidden    = ["Hidden:", $("#hideme").val()];
         
         
     // Save data to local storage Use stringify to convert object to a string
