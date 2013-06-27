@@ -15,7 +15,8 @@
 	<meta http-equiv="cleartype" content="on" />
 	
 	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
 	<link rel="stylesheet" href="css/style.css" />
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -25,7 +26,7 @@
 <body>
 
     <!-- Home Page -->
-    <div data-role="page" id="home">
+    <div data-role="page" id="home" data-theme="b">
         <div data-role="header" data-position="fixed" data-theme="b">
             <div align="center"><canvas id="canvas" height="100px"></canvas></div>
             <h1>Lead Manager</h1>
@@ -39,22 +40,22 @@
         </div>
         <!-- Browse and Search -->
         <div data-role="content">
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+            <div data-role="collapsible" data-inset="false" data-theme="a">
                 <h3>Name</h3>
-                <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="d" data-filter-placeholder="Search by Name" class="ui-icon-alt">
-                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                <ul data-role="listview" data-filter="true" data-ajax="false"  data-theme="c" data-filter-placeholder="Search by Name" class="ui-icon-alt">
+                    <li><div data-role="collapsible" data-theme="a" data-content-theme="a">
                         <h4>Peter</h4>
                         <h5>Name: Peter</h5>
                         <p>Phone: 408-555-1212</p>
                         <p>Email: peter@gmail.com</p>
                     </div></li>
-                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                    <li><div data-role="collapsible" data-theme="a" data-content-theme="a">
                         <h4>Ellie</h4>
                         <h5>Name: Ellie</h5>
                         <p>Phone: 415-555-1212</p>
                         <p>Email: ellie@gmail.com</p>
                     </div></li>
-                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                    <li><div data-role="collapsible" data-theme="a" data-content-theme="a">
                         <h4>Ruby</h4>
                         <h5>Name: Ruby</h5>
                         <p>Phone: 916-555-1212</p>
@@ -62,22 +63,22 @@
                     </div></li>
                 </ul>
             </div>
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false">
+            <div data-role="collapsible" data-theme="a" data-content-theme="c" data-inset="false">
                 <h3>Email</h3>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Email">
-                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                    <li><div data-role="collapsible" data-theme="a" data-content-theme="a">
                         <h4>peter@gmail.com</h4>
                         <h5>Name: Peter</h5>
                         <p>Phone: 408-555-1212</p>
                         <p>Email: peter@gmail.com</p>
                     </div></li>
-                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                    <li><div data-role="collapsible" data-theme="a" data-content-theme="a">
                         <h4>ellie@gmail.com</h4>
                         <h5>Name: Ellie</h5>
                         <p>Phone: 415-555-1212</p>
                         <p>Email: ellie@gmail.com</p>
                     </div></li>
-                    <li><div data-role="collapsible" data-theme="c" data-content-theme="d">
+                    <li><div data-role="collapsible" data-theme="a" data-content-theme="a">
                         <h4>ruby@gmail.com</h4>
                         <h5>Name: Ruby</h5>
                         <p>Phone: 916-555-1212</p>
@@ -85,7 +86,7 @@
                     </div></li>
                 </ul>
             </div>
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
+            <div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false" data-filter="true">
                 <h3>Date</h3>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Date">
                     <li><a href="#info1">Monday June 10, 2013</a></li>
@@ -93,7 +94,7 @@
                     <li><a href="#info3">Friday June 14, 2013</a></li>
                 </ul>
             </div><!-- /collapsible -->            
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
+            <div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false" data-filter="true">
                 <h3>Property Type</h3>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Type">
                     <li><a href="#info1">Townhome</a></li>
@@ -101,7 +102,7 @@
                     <li><a href="#info3">Single Family</a></li>
                 </ul>
             </div><!-- /collapsible -->
-            <div data-role="collapsible" data-theme="b" data-content-theme="d" data-inset="false" data-filter="true">
+            <div data-role="collapsible" data-theme="a" data-content-theme="a" data-inset="false" data-filter="true">
                 <h3>Number of Bedrooms</h3>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search by Bedrooms" id="list">
                     <li><a href="#info1">1+</a></li>
@@ -110,7 +111,7 @@
                 </ul>
             </div><!-- /collapsible -->
         </div>
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
         	<div data-role="navbar">
         		<ul>
         			<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
@@ -243,23 +244,22 @@
     </div>
     
     <!-- Info Page -->
-    <div data-role="page" id="info" data-add-back-btn="true">
+    <div data-role="page" id="info" data-add-back-btn="true" data-theme="b">
         <div data-role="header" data-position="fixed" data-theme="b">
             <div align="center"><img src="images/chart.png" height="75px" /></div>
-            <a href="#home" data-icon="arrow-l">Back</a>
             <h1>Info</h1>
         </div>
         <div data-role="content">
             <div class="ui-grid-a" align="center">
-                <a href="#home"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-c">
+                <a href="#home"><div class="ui-block-b">
+                <div class="ui-bar ui-bar-b">
                     <p>Home</p>
                     <img src="images/pie.png" height="50px">
                 </div>
                 </div>
                 </a>
                 <a href="#about"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-c">
+                <div class="ui-bar ui-bar-b">
                     <p>About</p>
                     <img src="images/pie.png" height="50px">
                 </div>
@@ -269,15 +269,15 @@
             
             
             <div class="ui-grid-a" align="center">
-                <a href="http://g38015.github.io/miu/hitchcock_peter_project2/gold/" data-ajax="false"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-c">
+                <a href="http://g38015.github.io/miu/hitchcock_peter_project4/gold/" data-ajax="false"><div class="ui-block-a">
+                <div class="ui-bar ui-bar-b">
                     <p>Gold Live</p>
                     <img src="images/chart.png" height="50px">
                 </div>
                 </div>
                 </a>
-                <a href="http://g38015.github.io/miu/hitchcock_peter_project2/bronze/" data-ajax="false"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-c">
+                <a href="http://g38015.github.io/miu/hitchcock_peter_project4/bronze/" data-ajax="false"><div class="ui-block-b">
+                <div class="ui-bar ui-bar-b">
                     <p>Bronze Live</p>
                     <img src="images/chart.png" height="50px">
                 </div>
@@ -286,15 +286,15 @@
             </div><!-- /grid-a -->
             
             <div class="ui-grid-a" align="center">
-                <a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/gold" data-ajax="false"><div class="ui-block-a">
-                <div class="ui-bar ui-bar-c">
+                <a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project4/gold" data-ajax="false"><div class="ui-block-a">
+                <div class="ui-bar ui-bar-b">
                     <p>Gold Github</p>
                     <img src="images/news.png" height="50px">
                 </div>
                 </div>
                 </a>
-                <a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project2/bronze" data-ajax="false"><div class="ui-block-b">
-                <div class="ui-bar ui-bar-c">
+                <a href="https://github.com/g38015/miu/tree/master/hitchcock_peter_project4/bronze" data-ajax="false"><div class="ui-block-b">
+                <div class="ui-bar ui-bar-b">
                     <p>Bronze Github</p>
                     <img src="images/news.png" height="50px">
                 </div>
@@ -303,7 +303,7 @@
             </div><!-- /grid-a -->
             
         </div>
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
         	<div data-role="navbar">
         		<ul>
         			<li><a href="#home">Home</a></li>
@@ -316,15 +316,14 @@
     </div>
     
     <!-- News Page -->
-    <div data-role="page" id="news" data-add-back-btn="true">
+    <div data-role="page" id="news" data-add-back-btn="true" data-theme="b">
         <div data-role="header" data-position="fixed" data-theme="b">
             <div align="center"><img src="images/chart.png" height="75px" /></div>
-            <a href="#home" data-icon="arrow-l">Back</a>
             <h1>Lead Stream</h1>
         </div>
         <div data-role="content">
         <!-- NEWS STREAM SAMPLE -->
-            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search">
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search" data-theme="a">
                 <li data-role="list-divider">Thursday, June 13, 2013 <span class="ui-li-count">2</span></li>
                 <li><a href="#error">
                     <img src="images/pie.png">
@@ -350,7 +349,7 @@
                 </a></li>
             </ul>  
         </div>
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
         	<div data-role="navbar">
         		<ul>
         			<li><a href="#home">Home</a></li>
@@ -363,7 +362,7 @@
     </div>
     
     <!-- About Page -->
-    <div data-role="page" id="about">
+    <div data-role="page" id="about" data-theme="a">
         <div data-role="header" data-position="fixed" data-theme="b">
             <div align="center"><img src="images/chart.png" height="75px" /></div>
             <a href="#info" data-icon="arrow-l">Back</a>
@@ -373,7 +372,7 @@
             <h3>About Lead Manager</h3>
             <p>The Lead Manager App was created for Real Estate Agents on the go. Keeping track of your leads is critical in today's competitive market.  Understanding what your customer is looking for at any given time is now possible with the Lead Manager App!</p>
         </div>
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
         	<div data-role="navbar">
         		<ul>
         			<li><a href="#home">Home</a></li>
@@ -471,8 +470,9 @@
     </div>
     
     <!-- Error -->
-    <div data-role="page" id="error" data-add-back-btn="true">
+    <div data-role="page" id="error" data-add-back-btn="true" data-theme="a">
         <div data-role="header" data-position="fixed" data-theme="b">
+            <div align="center"><img src="images/chart.png" height="75px" /></div>
             <h1>Error 404</h1>
         </div>
         <div data-role="content">
@@ -480,7 +480,7 @@
                 <p>News Feed is Currently Down</p>
             </div>
         </div>
-        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="b">
+        <div data-role="footer" data-id="footer" data-position="fixed" data-theme="c">
         	<div data-role="navbar">
         		<ul>
         			<li><a href="#home">Home</a></li>
